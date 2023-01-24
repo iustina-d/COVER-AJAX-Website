@@ -1,15 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Products</title>
-</head>
-<body>
-  {% for product in products %}
-  <h1>{{product.product_name}}</h1>
-  <h1>{{product.price}}</h1>
-  {% endfor %}
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel&family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/ae97ef602e.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/static/css/prosucts.css" />
+    <title>Products</title>
+  </head>
+  <nav class="navbar bg">
+    <div class="first-row">
+      <ul class="links-container">
+        <li class="link-item active"><a href="#" class="link">home</a></li>
+        <li class="link-item"><a href="#" class="link">product</a></li>
+        <li class="link-item"><a href="#" class="link">about</a></li>
+        <li class="link-item"><a href="#" class="link">contact</a></li>
+      </ul>
+      <div class="user-interactions">
+        <div class="cart">
+          <i class="fa-solid fa-cart-shopping cart-icon"></i>
+          <span class="cart-item-count">00</span>
+        </div>
+        <div class="user">
+          <i class="fa-solid fa-user user-icon"></i>
+        </div>
+      </div>
+    </div>
+    <div class="second-row">
+      <ul class="links-container">
+        <li class="link-item active"><a href="#" class="link">bed</a></li>
+        <li class="link-item"><a href="#" class="link">closet</a></li>
+        <li class="link-item"><a href="#" class="link">sofa</a></li>
+        <li class="link-item"><a href="#" class="link">seat</a></li>
+        <li class="link-item"><a href="#" class="link">desk</a></li>
+        <li class="link-item"><a href="#" class="link">armchair</a></li>
+        <li class="link-item"><a href="#" class="link">table</a></li>
+      </ul>
+    </div>
+  </nav>
+  <body></body>
 </html>
