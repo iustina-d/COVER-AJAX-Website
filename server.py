@@ -14,6 +14,11 @@ app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 def main():
   return render_template("home.html")
 
+@app.route("/search")
+def products():
+  all_products = data_manager.get_all_products()
+  return render_template("products.html",products=all_products)
+
 
 if __name__ == "__main__":
     app.run(debug=True)
