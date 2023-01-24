@@ -15,7 +15,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="/static/css/home.css" />
-    
+    <link rel="stylesheet" href="/static/css/product.css" />
     <title>Product</title>
   </head>
   <body>
@@ -36,5 +36,59 @@
         </div>
       </div>
     </nav>
+    <section class="product-section">
+      <img src="{{product.image}}" alt="" class="product-image" />
+      <div class="product-info">
+        {% if product.category == "Couches" %}
+        <h1 class="product-title">premium sofa</h1>
+        <p class="product-des">
+          The fabric behind the furniture is no different from the main fabric
+          of the furniture. You can place furniture with this feature in the
+          middle of the room.
+          <br />
+          Velvet is a fabric with a luxurious texture and appearance, with an
+          axomine structure. It is a shaded fabric that tends to change shade
+          depending on the lighting.<br />
+          "Dolphin" sleeping mechanism: The drawer under the seat is invisible
+          and when removed, the furniture can become a great place to sleep.
+        </p>
+        {% endif %}
+        <div class="rating">
+          <img
+            src="/static/images/products/full-star .png"
+            alt=""
+            class="star"
+          />
+          <img
+            src="/static/images/products/full-star .png"
+            alt=""
+            class="star"
+          />
+          <img
+            src="/static/images/products/full-star .png"
+            alt=""
+            class="star"
+          />
+          <img
+            src="/static/images/products/full-star .png"
+            alt=""
+            class="star"
+          />
+          <img
+            src="/static/images/products/half-star.png"
+            alt=""
+            class="star"
+          />
+          <span class="rating-count">4.50 reviews</span>
+        </div>
+        <p class="price">$ {{product.price}}</p>
+        <div class="btn-container">
+          <form action="{{url_for('card',id=product.id)}}">
+            <button class="product-btn buy-btn">buy now</button>
+          </form>
+          <button class="product-btn cart-btn">add to cart</button>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
