@@ -306,3 +306,12 @@ body {
   margin: 0 auto;
   opacity: 0.7;
 }
+.end-section{
+  padding: 50px 5vw;
+}
+.end-section .section-item-container{
+  height: 800px;
+}
+.end-section .section-info{
+  margin: 0;
+}
