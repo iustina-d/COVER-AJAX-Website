@@ -14,39 +14,54 @@
       src="https://kit.fontawesome.com/ae97ef602e.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="/static/css/home.css" />
     <link rel="stylesheet" href="/static/css/prosucts.css" />
     <title>Products</title>
   </head>
-  <nav class="navbar bg">
-    <div class="first-row">
-      <ul class="links-container">
-        <li class="link-item active"><a href="#" class="link">home</a></li>
-        <li class="link-item"><a href="#" class="link">product</a></li>
-        <li class="link-item"><a href="#" class="link">about</a></li>
-        <li class="link-item"><a href="#" class="link">contact</a></li>
-      </ul>
-      <div class="user-interactions">
-        <div class="cart">
-          <i class="fa-solid fa-cart-shopping cart-icon"></i>
-          <span class="cart-item-count">00</span>
-        </div>
-        <div class="user">
-          <i class="fa-solid fa-user user-icon"></i>
+  <body>
+    <nav class="navbar bg">
+      <div class="first-row">
+        <ul class="links-container">
+          <li class="link-item active"><a href="/" class="link">home</a></li>
+          <li class="link-item"><a href="/search" class="link">product</a></li>
+          <li class="link-item"><a href="#" class="link">about</a></li>
+          <li class="link-item"><a href="#" class="link">contact</a></li>
+        </ul>
+        <div class="user-interactions">
+          <div class="cart">
+            <i class="fa-solid fa-cart-shopping cart-icon"></i>
+            <span class="cart-item-count">00</span>
+          </div>
+          <div class="user">
+            <i class="fa-solid fa-user user-icon"></i>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="second-row">
-      <ul class="links-container">
-        <li class="link-item active"><a href="#" class="link">bed</a></li>
-        <li class="link-item"><a href="#" class="link">closet</a></li>
-        <li class="link-item"><a href="#" class="link">sofa</a></li>
-        <li class="link-item"><a href="#" class="link">seat</a></li>
-        <li class="link-item"><a href="#" class="link">desk</a></li>
-        <li class="link-item"><a href="#" class="link">armchair</a></li>
-        <li class="link-item"><a href="#" class="link">table</a></li>
-      </ul>
-    </div>
-  </nav>
-  <script src="/static/js/products.js"></script>
-  <body></body>
+      <div class="second-row">
+        <ul class="links-container">
+          <li class="link-item active"><a href="#" class="link">bed</a></li>
+          <li class="link-item"><a href="#" class="link">closet</a></li>
+          <li class="link-item"><a href="#" class="link">sofa</a></li>
+          <li class="link-item"><a href="#" class="link">seat</a></li>
+          <li class="link-item"><a href="#" class="link">desk</a></li>
+          <li class="link-item"><a href="#" class="link">armchair</a></li>
+          <li class="link-item"><a href="#" class="link">table</a></li>
+        </ul>
+      </div>
+    </nav>
+    <section class="search-listing">
+      <h1 class="section-title">Products</h1>
+      <div class="product-container">
+        {% for product in products %}
+        <a href="{{url_for('product',id=product.id)}}">
+          <div class="product-card">
+            <img src="{{product.image}}" alt="" class="product-img" />
+            <p class="product-price">$ {{product.price}}</p>
+          </div>
+        </a>
+        {% endfor %}
+      </div>
+    </section>
+    <script src="/static/js/products.js"></script>
+  </body>
 </html>
