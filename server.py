@@ -41,8 +41,13 @@ def cart():
 def card():
   return render_template("card.html")
 
+@app.route("/about-us")
+def about_us():
+  return render_template("about_us.html")
 
-
+@app.route("/contact-us")
+def contact_us():
+  return render_template("contact_us.html")
 
 
 
