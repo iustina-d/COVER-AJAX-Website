@@ -86,14 +86,14 @@ button {
   text-align: start;
   align-items: center;
 }
-.registration h3 {
-  margin: 1.2rem 1rem 0;
-}
-.arrow_image {
+.regis.arrow_image {
   width: 120px;
   height: 80px;
   padding: 2rem;
+}tration h3 {
+  margin: 1.2rem 1rem 0;
 }
+
 
 @media (min-width: 700px) {
   .container {
