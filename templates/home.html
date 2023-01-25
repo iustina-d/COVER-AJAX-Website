@@ -27,8 +27,10 @@
       </ul>
       <div class="user-interactions">
         <div class="cart">
-          <i class="fa-solid fa-cart-shopping cart-icon"></i>
-          <span class="cart-item-count">00</span>
+          <a href="{{ url_for('cart') }}">
+            <i class="fa-solid fa-cart-shopping cart-icon"></i>
+            <span class="cart-item-count">00</span></a
+          >
         </div>
         <div class="user">
           <a href="{{ url_for('login') }}">
