@@ -45,13 +45,13 @@
       </div>
       <div class="second-row">
         <ul class="links-container">
-          <li class="link-item active"><a href="#" class="link">bed</a></li>
-          <li class="link-item"><a href="#" class="link">closet</a></li>
-          <li class="link-item"><a href="#" class="link">sofa</a></li>
-          <li class="link-item"><a href="#" class="link">seat</a></li>
-          <li class="link-item"><a href="#" class="link">desk</a></li>
-          <li class="link-item"><a href="#" class="link">armchair</a></li>
-          <li class="link-item"><a href="#" class="link">table</a></li>
+          <li class="link-item active"><a href="{{url_for('get_products_by_category',category='Bed')}}" class="link">bed</a></li>
+          <li class="link-item"><a href="{{url_for('get_products_by_category',category='Closet')}}" class="link">closet</a></li>
+          <li class="link-item"><a href="{{url_for('get_products_by_category',category='Sofa')}}" class="link">sofa</a></li>
+          <li class="link-item"><a href="{{url_for('get_products_by_category',category='Chair')}}" class="link">Chair</a></li>
+          <li class="link-item"><a href="{{url_for('get_products_by_category',category='Desk')}}" class="link">desk</a></li>
+          <li class="link-item"><a href="{{url_for('get_products_by_category',category='Armchair')}}" class="link">armchair</a></li>
+          <li class="link-item"><a href="{{url_for('get_products_by_category',category='Table')}}" class="link">table</a></li>
         </ul>
       </div>
     </nav>
