@@ -19,6 +19,11 @@ def products():
   all_products = data_manager.get_all_products()
   return render_template("products.html",products=all_products)
 
+@app.route("/search/<category>")
+def get_products_by_category(category):
+  all_products = data_manager.get_products_using_category(category)
+  return render_template("products.html",products=all_products)
+
 @app.route("/product/<int:id>")
 def product(id):
   get_product = data_manager.get_product(id)
@@ -48,6 +53,7 @@ def about_us():
 @app.route("/contact-us")
 def contact_us():
   return render_template("contact_us.html")
+
 
 
 
