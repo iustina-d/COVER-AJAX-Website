@@ -23,17 +23,23 @@
       <div class="first-row">
         <ul class="links-container">
           <li class="link-item active"><a href="/" class="link">home</a></li>
-          <li class="link-item"><a href="/search" class="link">product</a></li>
-          <li class="link-item"><a href="#" class="link">about</a></li>
-          <li class="link-item"><a href="#" class="link">contact</a></li>
+          <li class="link-item"><a href="/search" class="link">products</a></li>
+          <li class="link-item"><a href="/about-us" class="link">about</a></li>
+          <li class="link-item">
+            <a href="/contact-us" class="link">contact</a>
+          </li>
         </ul>
         <div class="user-interactions">
           <div class="cart">
-            <i class="fa-solid fa-cart-shopping cart-icon"></i>
-            <span class="cart-item-count">00</span>
+            <a href="{{ url_for('cart') }}">
+              <i class="fa-solid fa-cart-shopping cart-icon"></i>
+              <span class="cart-item-count">00</span></a
+            >
           </div>
           <div class="user">
-            <i class="fa-solid fa-user user-icon"></i>
+            <a href="{{ url_for('login') }}">
+              <i class="fa-solid fa-user user-icon"></i
+            ></a>
           </div>
         </div>
       </div>
