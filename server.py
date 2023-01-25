@@ -33,6 +33,14 @@ def login():
 def registrate():
   return render_template("registrate.html")
 
+@app.route("/cart")
+def cart():
+  return render_template("cart.html")
+
+@app.route("/card")
+def card():
+  return render_template("card.html")
+
 
 
 
