@@ -45,12 +45,8 @@ button {
   margin-bottom: 2rem;
 }
 .container form .form-inner {
-  /* display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.25rem; */
   display: flex;
   flex-direction: column;
-  /* margin-top: 1.25rem; */
 }
 .container form .form-inner article {
   margin-top: 1.25rem;
