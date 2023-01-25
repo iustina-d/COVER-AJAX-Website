@@ -13,5 +13,9 @@ def get_product(cursor,id):
     {"id":id})
     return cursor.fetchone()
 
-
+@database_common.connection_handler
+def get_products_using_category(cursor,category):
+    cursor.execute("SELECT * FROM products WHERE category = %(category)s ;",
+    {"category":category})
+    return cursor.fetchall()
 
