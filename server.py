@@ -22,7 +22,25 @@ def products():
 @app.route("/product/<int:id>")
 def product(id):
   get_product = data_manager.get_product(id)
-  return render_template("product.html",product=get_product)
+  details = get_product["info"].split(',')
+  return render_template("product.html",product=get_product,details=details)
+
+@app.route("/login")
+def login():
+  return render_template("login.html")
+
+@app.route("/registrate")
+def registrate():
+  return render_template("registrate.html")
+
+
+
+
+
+
+
+
+
 
 if __name__ == "__main__":
     app.run(debug=True)
