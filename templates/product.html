@@ -45,8 +45,7 @@
     <section class="product-section">
       <img src="{{product.image}}" alt="" class="product-image" />
       <div class="product-info">
-        {% if product.category == "Couches" %}
-        <h1 class="product-title">premium sofa</h1>
+        <h1 class="product-title">premium {{product.category}}</h1>
         <p class="product-des">
           The fabric behind the furniture is no different from the main fabric
           of the furniture. You can place furniture with this feature in the
@@ -58,30 +57,30 @@
           "Dolphin" sleeping mechanism: The drawer under the seat is invisible
           and when removed, the furniture can become a great place to sleep.
         </p>
-        {% endif %}
+
         <div class="rating">
           <img
-            src="/static/images/products/full-star .png"
+            src="/static/images/full-star .png"
             alt=""
             class="star"
           />
           <img
-            src="/static/images/products/full-star .png"
+            src="/static/images/full-star .png"
             alt=""
             class="star"
           />
           <img
-            src="/static/images/products/full-star .png"
+            src="/static/images/full-star .png"
             alt=""
             class="star"
           />
           <img
-            src="/static/images/products/full-star .png"
+            src="/static/images/full-star .png"
             alt=""
             class="star"
           />
           <img
-            src="/static/images/products/half-star.png"
+            src="/static/images/half-star.png"
             alt=""
             class="star"
           />
@@ -157,27 +156,27 @@
       <p class="rating-text">how much you like the product</p>
       <div class="star-countainer">
         <img
-          src="/static/images/products/empty-star.png"
+          src="/static/images/empty-star.png"
           alt=""
           class="rating-star"
         />
         <img
-          src="/static/images/products/empty-star.png"
+          src="/static/images/empty-star.png"
           alt=""
           class="rating-star"
         />
         <img
-          src="/static/images/products/empty-star.png"
+          src="/static/images/empty-star.png"
           alt=""
           class="rating-star"
         />
         <img
-          src="/static/images/products/empty-star.png"
+          src="/static/images/empty-star.png"
           alt=""
           class="rating-star"
         />
         <img
-          src="/static/images/products/empty-star.png"
+          src="/static/images/empty-star.png"
           alt=""
           class="rating-star"
         />
@@ -249,5 +248,6 @@
       </div>
     </section>
     <footer>made by dulea iustina</footer>
+    <script src="/static/js/product.js"></script>
   </body>
 </html>
