@@ -54,12 +54,5 @@ def about_us():
 def contact_us():
   return render_template("contact_us.html")
 
-
-
-
-
-
-
-
 if __name__ == "__main__":
     app.run(debug=True)

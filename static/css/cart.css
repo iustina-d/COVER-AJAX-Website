@@ -1,33 +1,35 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700");
-*,
-*:before,
-*:after {
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "cinzel", serif;
   box-sizing: border-box;
 }
-
 body {
   padding: 5rem;
-  font-family: "Source Sans Pro", sans-serif;
-  margin: 0;
   background-color: rgb(237 237 237);
 }
-
-h1 {
-  margin: 0;
+.x-close{
+  text-decoration: none;
+}
+.fa-xmark {
+  display: flex;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.776);
+}
+h1{
+  text-align: center;
+  padding: 50px 0px;
 }
 
-.container {
-  background-color: #fff;
-  max-width: 1000px;
-  padding: 2rem;
-  margin-right: auto;
-  margin-left: auto;
+.table-img {
+  width: 100px;
+  height: 100px;
   border-radius: 25px;
 }
-a {
-  text-decoration: none;
-  color: rgb(50, 50, 50);
+.table-img:hover {
+  transform: scale(1.2);
 }
+
 .container a .fa-xmark {
   display: flex;
   justify-content: flex-end;
@@ -37,57 +39,6 @@ a {
 .fa-arrow-up:hover,
 .fa-arrow-down:hover {
   color: rgb(124 121 121);
-}
-h1 {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-.table {
-  width: 100%;
-  border: 1px solid #eeeeee;
-}
-
-.table-header {
-  display: flex;
-  width: 100%;
-  background: #000;
-  padding: 18px 0;
-}
-
-.table-row {
-  display: flex;
-  width: 100%;
-  padding: 18px 0;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-}
-
-.table-row:nth-of-type(odd) {
-  background: #eeeeee;
-}
-.table-row img {
-  width: 100px;
-  height: 100px;
-  border-radius: 25px;
-}
-.table-row img:hover {
-  transform: scale(1.2);
-}
-
-.table-data,
-.header__item {
-  flex: 1 1 20%;
-  text-align: center;
-}
-
-.header__item {
-  text-transform: uppercase;
-  color: white;
-  position: relative;
-  display: inline-block;
-  padding-left: 24px;
-  padding-right: 24px;
 }
 form {
   display: flex;
@@ -99,16 +50,35 @@ form h2 {
   font-size: 2rem;
   margin-right: 2rem;
 }
-form h2 strong {
-  margin-left: 1rem;
-}
 form .pay-method {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
-form .pay-method button{
-  margin-top: 0 !important;
+form .pay-method .btn {
+  background-color: #3d3f56;
+  color: #fff;
+  padding: 10px 40px;
+  /* margin-top: 0 !important; */
 }
 form .pay-method h3 {
   margin: 1rem;
+  font-size: 26px;
+}
+
+@media (max-width:1200px){
+  form h2{
+    font-size: 25px;
+  }
+  form .pay-method h3{
+    font-size: 19px;
+  }
+}
+@media (max-width:992px){
+  form h2{
+    font-size: 20px;
+  }
+  form .pay-method h3{
+    display: none;
+  }
 }
