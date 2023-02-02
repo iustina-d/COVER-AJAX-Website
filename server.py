@@ -5,10 +5,9 @@ import data_manager
 app = Flask(__name__)
 app.secret_key = "aegsrg-wr+a7 na7"
 
-UPLOAD_FOLDER = (
+app.config["UPLOAD_FOLDER"] = (
     os.getenv("UPLOAD_FOLDER") if "UPLOAD_FOLDER" in os.environ else "images"
 )
-app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 
 
 @app.route("/")
@@ -18,21 +17,29 @@ def main():
 
 @app.route("/search")
 def products():
-    all_products = data_manager.get_all_products()
-    return render_template("products.html", products=all_products)
+    return render_template(
+        "products.html",
+        products=data_manager.get_all_products(),
+    )
 
 
 @app.route("/search/<category>")
 def get_products_by_category(category):
-    all_products = data_manager.get_products_using_category(category)
-    return render_template("products.html", products=all_products)
+    return render_template(
+        "products.html",
+        products=data_manager.get_products_using_category(category),
+    )
 
 
 @app.route("/product/<int:id>")
 def product(id):
     get_product = data_manager.get_product(id)
     details = get_product["info"].split(",")
-    return render_template("product.html", product=get_product, details=details)
+    return render_template(
+        "product.html",
+        product=get_product,
+        details=details,
+    )
 
 
 @app.route("/login")
