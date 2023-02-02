@@ -1,6 +1,4 @@
-#!/bin/sh
-'''exec' "/home/iustina/Documents/portofoliu/Cover Ajax Website/flask_app/venv/bin/python3" "$0" "$@"
-' '''
+#!/home/alex/Documents/review/2023-02-02/COVER-AJAX-Website/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
