@@ -2,8 +2,11 @@ from flask import Flask, render_template, request, session, redirect, url_for
 import os
 import data_manager
 
+from dotenv import load_dotenv
+load_dotenv()
+
 app = Flask(__name__)
-app.secret_key = "aegsrg-wr+a7 na7"
+app.secret_key = os.environ.get("SECRET_KEY")
 
 app.config["UPLOAD_FOLDER"] = (
     os.getenv("UPLOAD_FOLDER") if "UPLOAD_FOLDER" in os.environ else "images"

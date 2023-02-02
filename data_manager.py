@@ -11,13 +11,17 @@ def get_all_products(cursor):
 
 @database_common.connection_handler
 def get_product(cursor, id):
-    cursor.execute("SELECT * FROM products WHERE id = %(id)s ;", {"id": id})
+    cursor.execute(
+        "SELECT * FROM products WHERE id = %(id)s ;",
+        {"id": id},
+    )
     return cursor.fetchone()
 
 
 @database_common.connection_handler
 def get_products_using_category(cursor, category):
     cursor.execute(
-        "SELECT * FROM products WHERE category = %(category)s ;", {"category": category}
+        "SELECT * FROM products WHERE category = %(category)s ;",
+        {"category": category},
     )
     return cursor.fetchall()

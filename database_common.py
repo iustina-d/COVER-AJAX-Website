@@ -7,10 +7,10 @@ load_dotenv()
 
 
 def get_connection_string():
-    user_name = "postgres"
-    password = "02041999"
-    host = "localhost"
-    database_name = "COVER-AJAX"
+    user_name = os.environ.get("PSQL_USER")
+    password = os.environ.get("PSQL_PASS")
+    host = os.environ.get("PSQL_HOST")
+    database_name = os.environ.get("PSQL_NAME")
 
     env_variables_defined = user_name and password and host and database_name
 
