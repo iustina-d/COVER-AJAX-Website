@@ -5,14 +5,15 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+
 def get_connection_string():
     user_name = "postgres"
-    password  = "02041999"
+    password = "02041999"
     host = "localhost"
     database_name = "COVER-AJAX"
 
     env_variables_defined = user_name and password and host and database_name
-    
+
     if env_variables_defined:
         return "postgresql://{user_name}:{password}@{host}/{database_name}".format(
             user_name=user_name,
@@ -22,6 +23,7 @@ def get_connection_string():
         )
     else:
         raise KeyError("Some necessary environment variables(s) are not defined")
+
 
 def open_database():
     try:
@@ -35,11 +37,12 @@ def open_database():
 
 
 def connection_handler(function):
-    def wrapper(*args,**kwargs):
+    def wrapper(*args, **kwargs):
         connection = open_database()
         dict_cur = connection.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
-        ret_value = function(dict_cur,*args,**kwargs)
+        ret_value = function(dict_cur, *args, **kwargs)
         dict_cur.close()
         connection.close()
         return ret_value
+
     return wrapper
