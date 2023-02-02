@@ -1,0 +1,485 @@
+%m0 {
+    margin: 0;
+}
+
+%pad0 {
+    padding: 0;
+}
+
+%w100 {
+    width: 100%;
+}
+
+%h100 {
+    height: 100%;
+}
+
+%block {
+    display: block;
+}
+
+%bgwhite {
+    background-color: #fff;
+}
+
+%white {
+    color: #fff;
+}
+
+%bggrey {
+    background-color: #3d3f56;
+}
+
+%grey {
+    color: #3d3f56;
+}
+
+%bgblack {
+    background-color: #000;
+}
+
+%black {
+    color: #000;
+}
+
+%flex {
+    display: flex;
+}
+
+%between {
+    justify-content: space-between;
+}
+
+%fs14 {
+    font-size: 14px;
+}
+
+%fs16 {
+    font-size: 16px;
+}
+
+%fs20 {
+    font-size: 20px;
+}
+
+%bold {
+    font-weight: bold;
+}
+
+%op1 {
+    opacity: 1;
+}
+
+%dib {
+    display: inline-block;
+}
+
+%h16 {
+    height: 16px;
+}
+
+%ml20 {
+    margin-left: 20px;
+}
+
+%icon {
+    @extend %dib;
+    @extend %h16;
+    width: 14px;
+}
+
+%aic {
+    align-items: center;
+}
+
+%relative {
+    position: relative;
+}
+
+%absolute {
+    position: absolute;
+}
+
+%round {
+    border-radius: 50%;
+}
+
+%pointer {
+    cursor: pointer;
+}
+
+%w40 {
+    width: 40px;
+}
+
+%h40 {
+    height: 40px;
+}
+
+%w30 {
+    width: 30px;
+}
+
+%h30 {
+    height: 30px;
+}
+
+%r0 {
+    right: 0;
+}
+
+%border {
+    border: none;
+}
+
+* {
+    @extend %m0;
+    @extend %pad0;
+    box-sizing: border-box;
+}
+
+img {
+    @extend %w100;
+    @extend %h100;
+    min-width: 40px;
+    max-width: 56px;
+}
+
+.container-fluid {
+    @extend %bgwhite;
+    @extend %w100;
+    height: 100vh;
+}
+
+.payment-container {
+    @extend %flex;
+    @extend %w100;
+
+    padding: 20px 10px;
+    height: 70%;
+    background-color: #f1f1f1;
+    font-family: "cinzel", serif;
+    border-radius: 25px;
+
+    @media (max-width: 991px) {
+        width: 100%;
+        height: 100%;
+        padding-bottom: 20px !important;
+    }
+
+    .first-part {
+        @extend %flex;
+        @extend %between;
+
+        h4 {
+            @extend %fs14;
+            @extend %bold;
+            @extend %op1;
+
+            @media (max-width: 1368px) and (min-width: 992px) {
+                font-size: 12px;
+            }
+        }
+    }
+
+    h3 {
+        @extend %fs14;
+        font-weight: 300;
+
+        @media (max-width: 1368px) and (min-width: 992px) {
+            font-size: 12px;
+        }
+    }
+
+    .line {
+        @extend %op1;
+        border: 1px solid #fff;
+    }
+    .second-part {
+        h3 {
+            @extend %dib;
+            margin-left: 5px;
+
+            @media (max-width: 1368px) and (min-width: 992px) {
+                font-size: 12px;
+            }
+        }
+
+        h4 {
+            @extend %fs16;
+            @extend %bold;
+
+            @media (max-width: 1368px) and (min-width: 992px) {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.payment-info {
+    width: 350px;
+    height: 95%;
+    padding: 80px 0px 0px;
+}
+
+.payment-info-container {
+    @extend %bggrey;
+    padding: 50px 40px;
+
+    .first-part {
+        height: 50%;
+    }
+
+    .section-two {
+        @extend %flex;
+        @extend %between;
+
+        height: 40%;
+        align-items: flex-end;
+    }
+
+    h2 {
+        @extend %fs16;
+        @extend %bold;
+
+        @media (max-width: 1368px) and (min-width: 992px) {
+            font-size: 14px;
+        }
+    }
+}
+
+.notes-icon {
+    @extend %icon;
+}
+
+.calendar-icon {
+    @extend %icon;
+}
+
+.section-two {
+    h3 {
+        width: 150px;
+
+        @media (max-width: 1368px) and (min-width: 992px) {
+            font-size: 12px;
+        }
+    }
+
+    .message-container {
+        @extend %flex;
+        @extend %aic;
+        @extend %relative;
+        @extend %bgblack;
+        @extend %round;
+
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+
+        .massage-icon {
+            @extend %h16;
+            inset: 0;
+            width: 16px;
+        }
+
+        &:hover {
+            @extend %bgwhite;
+            @extend %black;
+        }
+    }
+}
+
+.payment-method {
+    @extend %block;
+    @extend %relative;
+    @extend %pad0;
+    @extend %bgwhite;
+    @extend %h100;
+
+    width: 450px;
+    padding: 50px 30px 30px;
+
+    @media (max-width: 991px) {
+        background-color: #fff;
+        border: 10px solid #f1f1f1;
+        border-top: none;
+    }
+
+    .first-part {
+        @extend %block;
+
+        .top {
+            @extend %flex;
+            @extend %w100;
+            @extend %between;
+
+            margin-bottom: 40px;
+            padding: 0px 10px 0px 20px;
+
+            i {
+                @extend %h16;
+                @extend %pointer;
+
+                color: #3d3f568a;
+                transition: all 0.5s;
+
+                &:hover {
+                    @extend %grey;
+                }
+            }
+        }
+    }
+
+    h2 {
+        @extend %grey;
+        @extend %fs20;
+        @extend %bold;
+
+        @media (max-width: 1368px) and (min-width: 992px) {
+            font-size: 16px;
+        }
+    }
+
+    .bottom {
+        @extend %flex;
+        @extend %between;
+        @extend %relative;
+
+        h3 {
+            @extend %dib;
+            @extend %m0;
+            @extend %black;
+            @extend %pointer;
+
+            margin-left: 10px;
+            font-weight: 400;
+
+            @media (max-width: 1368px) and (min-width: 992px) {
+                font-size: 12px;
+            }
+        }
+
+        .left {
+            .active {
+                color: #3d3f56b7;
+                border-bottom: 2px solid #000;
+            }
+        }
+    }
+
+    .line {
+        padding-top: 0;
+        margin-top: 0;
+    }
+
+    .second-part {
+        .icons {
+            @extend %flex;
+            @extend %aic;
+            justify-content: flex-start;
+
+            .add-icon {
+                @extend %ml20;
+                @extend %border;
+
+                font-size: 40px;
+            }
+
+            .btn {
+                @extend %bgwhite;
+                @extend %grey;
+                @extend %ml20;
+                @extend %fs20;
+
+                border: 1px solid #3d3f56;
+                padding: 5px 10px;
+
+                @media (max-width: 1368px) and (min-width: 992px) {
+                    font-size: 16px;
+                }
+            }
+
+            .first {
+                border-top-left-radius: 30px;
+                border-bottom-left-radius: 30px;
+            }
+
+            .second {
+                border-top-right-radius: 30px;
+                border-bottom-right-radius: 30px;
+
+                &:hover {
+                    @extend %bggrey;
+                }
+            }
+
+            .active {
+                @extend %bggrey;
+            }
+        }
+
+        form {
+            @extend %relative;
+
+            input:focus {
+                border: 2px solid #3d3f56;
+                box-shadow: 0px 0px 1rem #3d3f56;
+            }
+
+            .master-card {
+                @extend %absolute;
+                @extend %w40;
+                @extend %h40;
+
+                top: 47px;
+                right: 8px;
+            }
+
+            .lock-icon {
+                @extend %absolute;
+                @extend %r0;
+                @extend %w30;
+                @extend %h30;
+
+                top: 145px;
+            }
+
+            .account-icon {
+                @extend %absolute;
+                @extend %r0;
+                @extend %w30;
+                @extend %h40;
+
+                bottom: 60px;
+            }
+
+            .btn-submit {
+                @extend %bgblack;
+                @extend %white;
+                @extend %border;
+                @extend %w100;
+                @extend %h40;
+
+                margin-top: 10px;
+
+                &:hover {
+                    @extend %bggrey;
+                }
+            }
+        }
+    }
+}
+
+.add-icon {
+    &:hover {
+        @extend %grey;
+        @extend %round;
+        background-color: transparent;
+    }
+}
+
+label {
+    @media (max-width: 1368px) and (min-width: 992px) {
+        font-size: 14px;
+    }
+}

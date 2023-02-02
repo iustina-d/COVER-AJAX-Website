@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+%w100 {
+    width: 100%;
+}
+
+%flex {
+    display: flex;
+}
+
+%aligncenter {
+    align-items: center;
+}
+
+%p2rem {
+    padding: 2rem;
+}
+
+%mt125r {
+    margin-top: 1.25rem;
+}
+
+%outline {
+    outline: none;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    @extend %w100;
+    max-width: 100%;
+}
+
+.content {
+    @extend %flex;
+    @extend %aligncenter;
+
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    color: #3f3d56;
+    justify-content: center;
+    min-height: 80vh;
+}
+
+input,
+button {
+    font-family: inherit;
+}
+
+.arrow_image {
+    @extend %p2rem;
+
+    width: 120px;
+    height: 80px;
+}
+
+.container {
+    background-color: #f1f1f1;
+    padding: 1.25rem;
+    margin: 1.25rem;
+    width: 90%;
+    max-width: 700px;
+    border-radius: 2rem;
+    box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
+
+    @media (min-width: 700px) {
+        margin: 1.25rem auto;
+        padding: 2rem;
+    }
+
+    form {
+        h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .form-inner {
+            @extend %flex;
+            flex-direction: column;
+
+            @media (min-width: 700px) {
+                flex-direction: row;
+            }
+
+            article {
+                @extend %mt125r;
+
+                @media (min-width: 700px) {
+                    flex: 1;
+                }
+
+                &:not(:last-child) {
+                    @media (min-width: 700px) {
+                        margin-right: 1.25rem;
+                    }
+                }
+            }
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2rem;
+            margin-bottom: 0.2rem;
+        }
+
+        input {
+            @extend %outline;
+            @extend %w100;
+
+            border: 2px solid #3f3d5673;
+            border-radius: 0.6rem;
+            padding: 0.625rem 1.25rem;
+
+            &:focus {
+                border-color: #3f3d56;
+            }
+        }
+
+        .btn {
+            @extend %mt125r;
+            @extend %outline;
+
+            color: #fff;
+            padding: 0.625rem 3rem;
+            font-size: 1rem;
+            background-color: #3f3d56;
+            border: none;
+            border-radius: 0.625rem;
+            transition: opacity 0.2s ease-in-out;
+
+            &:hover {
+                cursor: pointer;
+                opacity: 0.75;
+            }
+        }
+    }
+}
+
+.registration {
+    @extend %flex;
+    @extend %aligncenter;
+
+    text-align: start;
+
+    h3 {
+        margin: 1.2rem 1rem 0;
+    }
+}

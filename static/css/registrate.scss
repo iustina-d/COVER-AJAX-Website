@@ -1,0 +1,141 @@
+@import "https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap";
+
+%aic{align-items: center;}
+%gri{background-color: #3f3d56;}
+%cp{cursor: pointer;}
+%df{display: flex;}
+%ffi{font-family: inherit;}
+%mt125{margin-top: 1.25rem;}
+%on{outline: none;}
+%w100{width: 100%;}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+ul {
+	list-style-type: none;
+}
+img {
+	max-width: 100%;
+	@extend %w100;
+}
+.content {
+	font-family: "Inter", sans-serif;
+	font-size: 16px;
+	color: #3f3d56;
+	@extend %df;
+	@extend %aic;
+	justify-content: center;
+	min-height: 80vh;
+}
+input {
+	@extend %ffi;
+}
+button {
+	@extend %ffi;
+}
+.arrow_image {
+	width: 120px;
+	height: 80px;
+	padding: 2rem;
+}
+.container {
+	background-color: #f1f1f1;
+	padding: 1.25rem;
+	margin: 1.25rem;
+	width: 90%;
+	max-width: 700px;
+	border-radius: 2rem;
+	box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
+	form {
+		h1 {
+			text-align: center;
+			margin-bottom: 2rem;
+		}
+		.form-inner {
+			@extend %df;
+			flex-direction: column;
+			article {
+				@extend %mt125;
+			}
+		}
+		label {
+			display: block;
+			font-weight: bold;
+			font-size: 0.8rem;
+			text-transform: uppercase;
+			letter-spacing: 0.2rem;
+			margin-bottom: 0.2rem;
+		}
+		input {
+			border-width: 2px;
+			border-style: solid;
+			border-color: #3f3d5673;
+			border-radius: 0.6rem;
+			@extend %on;
+			padding: 0.625rem 1.25rem;
+			@extend %w100;
+			&:focus {
+				border-color: #3f3d56;
+			}
+		}
+		.btn {
+			color: #fff;
+			padding: 0.625rem 3rem;
+			font-size: 1rem;
+			@extend %gri;
+			@extend %mt125;
+			border: none;
+			@extend %on;
+			border-radius: 0.625rem;
+			transition: opacity 0.2s ease-in-out;
+			&:hover {
+				@extend %cp;
+				opacity: 0.75;
+			}
+		}
+	}
+}
+.checkboxes {
+	@extend %df;
+	@extend %aic;
+	justify-content: start;
+	margin: 1rem 0 0.5rem 0;
+}
+.checkbox {
+	display: none;
+	&:checked {
+		+ {
+			.label {
+				.ball {
+					transform: translateX(24px);
+				}
+			}
+		}
+	}
+}
+.label {
+	position: relative;
+	background-color: #fff;
+	@extend %df;
+	@extend %cp;
+	@extend %aic;
+	justify-content: space-between;
+	border-radius: 50px;
+	margin: 0 1.25rem 0;
+	width: 50px;
+	height: 26px;
+}
+.ball {
+	@extend %gri;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	border-radius: 50%;
+	width: 22px;
+	height: 22px;
+	transition: transform 0.15s linear;
+	@extend %cp;
+}

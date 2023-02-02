@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
+
+%noradius {
+    border-radius: 0;
+}
+
+%h45 {
+    height: 45px;
+}
+
+%noborder {
+    border: none;
+}
+
+%black {
+    color: #000;
+}
+
+%grey2 {
+    color: #737371;
+}
+
+%bgblack {
+    background-color: #000;
+}
+
+%aligncenter {
+    align-items: center;
+}
+
+%flex {
+    @extend %aligncenter;
+    display: flex;
+    justify-content: center;
+}
+
+%border {
+    border: 1px solid #ddd;
+}
+
+%grey {
+    color: #333;
+}
+
+%bggrey {
+    background-color: #ddd;
+}
+
+%fs14 {
+    font-size: 14px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Montserrat", sans-serif;
+}
+
+.container {
+    margin: 20px auto;
+    width: 800px;
+    padding: 30px;
+
+    @media (max-width: 750px) {
+        padding: 10px;
+        width: 100%;
+    }
+}
+
+.arrow_image {
+    width: 120px;
+    height: 80px;
+    padding: 2rem;
+}
+
+.card {
+    .box1 {
+        @extend %bgblack;
+        @extend %noradius;
+
+        width: 350px;
+        height: 500px;
+        color: #fff;
+
+        @media (max-width: 750px) {
+            width: 100%;
+        }
+    }
+
+    .box2 {
+        @extend %noradius;
+
+        width: 450px;
+        height: 580px;
+        background-color: #ffffff;
+
+        @media (max-width: 750px) {
+            width: 100%;
+        }
+    }
+}
+
+.text {
+    font-size: 13px;
+}
+
+.box2 .btn.btn-primary.bar {
+    @extend %noborder;
+    @extend %black;
+
+    width: 20px;
+    background-color: transparent;
+
+    &:hover {
+        @extend %grey2;
+    }
+}
+
+.box1 .btn.btn-primary {
+    @extend %h45;
+    @extend %flex;
+    @extend %border;
+
+    background-color: #333;
+    width: 45px;
+
+    &:hover {
+        background-color: #f6f8f7;
+        @extend %grey;
+    }
+}
+
+.btn.btn-success {
+    @extend %bggrey;
+    @extend %black;
+    @extend %flex;
+    @extend %noborder;
+
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.nav.nav-tabs {
+    @extend %noborder;
+
+    border-bottom: 2px solid #ddd;
+
+    .nav-item .nav-link {
+        @extend %noborder;
+        @extend %black;
+        @extend %fs14;
+
+        border-bottom: 2px solid transparent;
+
+        &:hover {
+            @extend %black;
+
+            border-bottom: 2px solid #000;
+        }
+
+        &.active {
+            @extend %noborder;
+            @extend %grey2;
+
+            border-bottom: 2px solid #737371;
+        }
+
+        @media (max-width: 750px) {
+            font-size: 12px;
+        }
+    }
+}
+
+.form-control {
+    @extend %noborder;
+    @extend %fs14;
+    @extend %noradius;
+
+    box-shadow: none;
+    height: 20px;
+    font-weight: 600;
+    padding: 15px 0px;
+    letter-spacing: 1.5px;
+
+    &,
+    &:focus {
+        box-shadow: none;
+        border-bottom: 1px solid #ddd;
+    }
+}
+
+.inputWithIcon {
+    position: relative;
+
+    span {
+        @extend %grey;
+        @extend %fs14;
+
+        position: absolute;
+        right: 0px;
+        bottom: 9px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+}
+
+img {
+    width: 50px;
+    height: 20px;
+    object-fit: cover;
+}
+
+.btn-outline-primary {
+    @extend %black;
+    @extend %bggrey;
+    @extend %border;
+
+    &:hover {
+        @extend %bgblack;
+        @extend %border;
+    }
+}
+
+.btn-check:active + .btn-outline-primary,
+.btn-check:checked + .btn-outline-primary,
+.btn-outline-primary.active,
+.btn-outline-primary.dropdown-toggle.show,
+.btn-outline-primary:active {
+    @extend %bgblack;
+    @extend %border;
+
+    color: #d4d7d5;
+    box-shadow: none;
+}
+
+.btn-group > .btn-group:not(:last-child) > .btn,
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn-group:not(:first-child) > .btn,
+.btn-group > .btn:nth-child(n + 3),
+.btn-group > :not(.btn-check) + .btn {
+    border-radius: 50px;
+    margin-right: 20px;
+}
+
+form {
+    @extend %fs14;
+
+    .btn.btn-primary {
+        @extend %h45;
+        @extend %flex;
+        @extend %aligncenter;
+        @extend %bgblack;
+        @extend %border;
+
+        width: 100%;
+
+        &:hover {
+            background-color: #737373;
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .text-green {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,767 @@
+%cinzel {
+    font-family: "cinzel", serif;
+}
+
+%tdn {
+    text-decoration: none;
+}
+
+%w100 {
+    width: 100%;
+}
+
+%white {
+    color: #fff;
+}
+
+%fs20 {
+    font-size: 20px;
+}
+
+%op07 {
+    opacity: 0.7;
+}
+
+%fwb {
+    font-weight: bold;
+}
+
+%posrel {
+    position: relative;
+}
+
+%posabs {
+    position: absolute;
+}
+
+%tac {
+    text-align: center;
+}
+
+%fs16 {
+    font-size: 16px;
+}
+
+%hide {
+    display: none;
+}
+
+%black {
+    color: #000;
+}
+
+%block {
+    display: block;
+}
+
+%bgwhite {
+    background-color: #fff;
+}
+
+%op1 {
+    opacity: 1;
+}
+
+%h100 {
+    height: 100%;
+}
+
+%caps {
+    text-transform: capitalize;
+}
+
+%fs30 {
+    font-size: 30px;
+}
+
+%flex {
+    display: flex;
+    justify-content: center;
+}
+
+%op05 {
+    opacity: 0.5;
+}
+
+%ofc {
+    object-fit: cover;
+}
+
+%t05 {
+    transition: 0.5s;
+}
+
+%lato {
+    font-family: "lato", sans-serif;
+}
+
+%fs25 {
+    font-size: 25px;
+}
+
+%padding {
+    padding: 0px 4% 100px;
+}
+
+%bgc {
+    background-size: cover;
+}
+
+%brnr {
+    background-repeat: no-repeat;
+}
+
+%padding200 {
+    padding: 20px 0;
+}
+
+%h800 {
+    height: 800px;
+}
+
+%w50 {
+    width: 50%;
+}
+
+%p5030 {
+    padding: 50px 30px;
+}
+
+%fs60 {
+    font-size: 60px;
+}
+
+%lh100 {
+    line-height: 100px;
+}
+
+%lh45 {
+    line-height: 45px;
+}
+
+%mt30 {
+    margin-top: 30px;
+}
+
+%peach {
+    color: rgb(210, 196, 182);
+}
+
+%round {
+    border-radius: 50%;
+}
+
+* {
+    @extend %cinzel;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    li {
+        @extend %tdn;
+        list-style-type: none;
+    }
+}
+
+nav {
+    @extend %cinzel;
+    @extend %w100;
+
+    position: fixed;
+    padding: 20px;
+    background-color: transparent;
+    z-index: 9;
+
+    &.bg {
+        @extend %bgwhite;
+
+        a {
+            color: rgba(0, 0, 0, 0.558);
+        }
+    }
+
+    a {
+        @extend %tdn;
+        @extend %white;
+        @extend %fs20;
+        @extend %op07;
+        @extend %fwb;
+    }
+
+    .cart-container {
+        @extend %posrel;
+
+        .cart-item-count {
+            @extend %posabs;
+            @extend %tac;
+
+            bottom: 5px;
+            left: 26px;
+            font-size: 12px;
+            background-color: #f1f1f1;
+            border-radius: 50px;
+        }
+    }
+
+    .cart-icon {
+        @extend %fs16;
+    }
+
+    .user-icon {
+        @extend %fs16;
+    }
+
+    .e-links {
+        @extend %hide;
+
+        > i {
+            @extend %black;
+        }
+
+        &:hover {
+            .side-menu {
+                @extend %block;
+            }
+
+            .side-menu.e-link {
+                @extend %block;
+            }
+        }
+
+        @media (max-width: 1805px) {
+            display: block;
+        }
+    }
+
+    .e-link {
+        color: rgba(0, 0, 0, 0.657);
+
+        &:hover {
+            @extend %black;
+        }
+    }
+
+    .side-menu {
+        @extend %hide;
+        @extend %posabs;
+        @extend %tac;
+        @extend %bgwhite;
+
+        width: 150px;
+        padding-left: 0px;
+    }
+
+    .link {
+        &:hover {
+            @extend %white;
+            @extend %op1;
+        }
+
+        @media (max-width: 1805px) {
+            display: none;
+        }
+    }
+}
+
+.page-content {
+    @extend %w100;
+    @extend %h100;
+}
+
+.header-container {
+    @extend %flex;
+
+    height: 100vh;
+    background: url(/static/images/home/header.jpg);
+    @extend %bgc;
+    align-items: center;
+}
+
+.header-heading {
+    @extend %tac;
+    @extend %caps;
+
+    font-size: 100px;
+    color: rgb(93, 89, 89);
+
+    span {
+        color: rgb(63, 89, 89);
+    }
+}
+
+.best-selling-products-section-title-container {
+    @extend %posrel;
+    padding: 60px 4% 20px;
+}
+
+.best-selling-products-title {
+    @extend %caps;
+    @extend %fs30;
+    margin-bottom: 30px;
+}
+
+.best-selling-products-section-products-container {
+    @extend %flex;
+    padding-bottom: 100px;
+}
+
+.product-card {
+    @extend %posrel;
+
+    border: 15px solid rgb(82, 53, 11);
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    padding: 0 !important;
+    margin: 5% 4% 2%;
+    background: rgb(82, 53, 11);
+
+    &:nth-child(even) {
+        border-color: rgb(210, 196, 182);
+        background: rgb(210, 196, 182);
+    }
+
+    &:hover {
+        .product-name {
+            @extend %op1;
+        }
+        .product-img {
+            @extend %op05;
+        }
+    }
+}
+
+.product-img {
+    @extend %w100;
+    @extend %h100;
+    @extend %ofc;
+    @extend %t05;
+}
+
+.product-name {
+    @extend %posabs;
+    @extend %white;
+    @extend %caps;
+    @extend %lato;
+    @extend %t05;
+    @extend %fs25;
+
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+}
+
+.arrow-img {
+    @extend %w100;
+    @extend %h100;
+
+    transform: rotate(270deg);
+}
+
+.mid-section-container {
+    @extend %padding;
+}
+
+.mid-container {
+    @extend %bgc;
+    @extend %brnr;
+    @extend %padding200;
+    @extend %h800;
+
+    background-image: url(/static/images/home/mid-section-img.jpg);
+}
+
+.mid-text-container {
+    @extend %w50;
+    @extend %h100;
+    @extend %bgwhite;
+    @extend %tac;
+    @extend %p5030;
+
+    margin-left: 49%;
+}
+
+.mid-section-title {
+    @extend %fs60;
+    @extend %lh100;
+    @extend %fwb;
+
+    span {
+        @extend %peach;
+    }
+
+    @media (max-width: 1300px) {
+        font-size: 55px;
+        line-height: 55px;
+    }
+
+    @media (max-width: 990px) {
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    @media (max-width: 890px) {
+        font-size: 35px;
+        line-height: 40px;
+    }
+
+    @media (max-width: 668px) {
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    @media (max-width: 552px) {
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
+
+.mid-section-text {
+    @extend %lato;
+    @extend %fs25;
+    @extend %lh45;
+    @extend %mt30;
+    @extend %op05;
+
+    @media (max-width: 1300px) {
+        font-size: 30px;
+        line-height: 45px;
+    }
+
+    @media (max-width: 990px) {
+        font-size: 25px;
+        line-height: 35px;
+    }
+
+    @media (max-width: 890px) {
+        font-size: 25px;
+        line-height: 35px;
+    }
+
+    @media (max-width: 668px) {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    @media (max-width: 552px) {
+        font-size: 15px;
+        line-height: 25px;
+    }
+}
+
+.image-collage-section-container {
+    @extend %padding;
+}
+
+.image-collage-container {
+    @extend %bgc;
+
+    background: url("/static/images/home/collage-img.webp");
+    height: 600px;
+}
+
+.images-container {
+    @extend %posrel;
+    @extend %w50;
+    @extend %h100;
+    @extend %bgwhite;
+    @extend %p5030;
+    @extend %tac;
+
+    margin-left: 25%;
+
+    .image-collection {
+        @extend %posrel;
+        @extend %block;
+        @extend %w50;
+        @extend %h100;
+
+        background: #fff;
+        margin: auto;
+    }
+
+    @media (max-width: 1300px) {
+        margin-left: 20%;
+        width: 55%;
+        padding: 50px 10px;
+    }
+
+    @media (max-width: 990px) {
+        margin-left: 22%;
+        width: 56%;
+        padding: 50px 10px;
+    }
+
+    @media (max-width: 668px) {
+        margin-left: 15%;
+        width: 70%;
+        padding: 50px 10px;
+    }
+
+    @media (max-width: 552px) {
+        margin-left: 10%;
+        width: 80%;
+        padding: 50px 10px;
+    }
+}
+
+.collage-img {
+    @extend %posabs;
+    @extend %ofc;
+    @extend %t05;
+
+    margin-left: 6vw;
+
+    &:nth-child(1) {
+        width: 35%;
+        height: 50%;
+        top: 20%;
+        left: 0%;
+
+        @media (max-width: 1300px) {
+            width: 35%;
+            height: 40%;
+        }
+
+        @media (max-width: 990px) {
+            top: 35%;
+            height: 35%;
+        }
+
+        @media (max-width: 668px) {
+            width: 35%;
+            height: 30%;
+        }
+    }
+
+    &:nth-child(2) {
+        width: 30%;
+        height: 30%;
+        top: 60%;
+        left: 20%;
+
+        @media (max-width: 1300px) {
+            width: 30%;
+            height: 20%;
+        }
+
+        @media (max-width: 668px) {
+            width: 30%;
+            height: 20%;
+        }
+    }
+
+    &:nth-child(3) {
+        width: 45%;
+        height: 40%;
+        top: 30%;
+        left: 31%;
+
+        @media (max-width: 1300px) {
+            width: 45%;
+            height: 30%;
+        }
+
+        @media (max-width: 668px) {
+            top: 40%;
+            width: 45%;
+            height: 25%;
+        }
+    }
+
+    &:hover {
+        transform: translateY(-10px);
+    }
+}
+
+.review-section-title-container {
+    padding: 0px 4% 30px;
+}
+
+.review-section-title {
+    color: black;
+    @extend %fs30;
+    @extend %caps;
+
+    span {
+        @extend %peach;
+    }
+}
+
+.review-section-content-container {
+    @extend %padding;
+}
+
+.review-card {
+    @extend %tac;
+    padding-left: 10px;
+
+    h2 {
+        @extend %lato;
+    }
+
+    .review {
+        @extend %lato;
+    }
+}
+
+.user-dp {
+    @extend %block;
+    @extend %round;
+    @extend %posrel;
+
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+
+    img {
+        @extend %w100;
+        @extend %h100;
+        @extend %ofc;
+        @extend %round;
+    }
+
+    &:before {
+        @extend %posabs;
+        @extend %round;
+
+        content: "";
+        inset: 6px;
+        border: 2px solid #fff;
+    }
+
+    &:after {
+        @extend %posabs;
+
+        content: attr(data-rating);
+        bottom: 0;
+        right: -20px;
+        padding: 5px 20px;
+        border-radius: 20px;
+        background-color: rgb(210, 196, 182);
+    }
+}
+
+.review-account-name {
+    @extend %fs20;
+    @extend %caps;
+
+    margin: 1rem;
+}
+
+.review {
+    @extend %op07;
+    padding: 0px 17%;
+
+    @media (max-width: 1300px) {
+        font-size: 15px;
+    }
+}
+
+.end-section-container {
+    @extend %padding;
+}
+
+.end-container {
+    @extend %bgc;
+    @extend %brnr;
+    @extend %padding200;
+    @extend %h800;
+
+    background-image: url(/static/images/home/collage-img2.jpg);
+}
+
+.end-text-container {
+    @extend %w50;
+    @extend %h100;
+    @extend %bgwhite;
+    @extend %p5030;
+    @extend %tac;
+
+    margin-left: 1%;
+}
+
+.end-section-title {
+    @extend %fs60;
+    @extend %lh100;
+    @extend %fwb;
+
+    span {
+        @extend %peach;
+    }
+
+    @media (max-width: 1300px) {
+        font-size: 55px;
+        line-height: 55px;
+    }
+
+    @media (max-width: 990px) {
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    @media (max-width: 890px) {
+        font-size: 35px;
+        line-height: 40px;
+    }
+
+    @media (max-width: 668px) {
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    @media (max-width: 552px) {
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
+
+.end-section-text {
+    @extend %lato;
+    @extend %fs25;
+    @extend %op05;
+    @extend %lh45;
+    @extend %mt30;
+
+    @media (max-width: 1300px) {
+        font-size: 30px;
+        line-height: 45px;
+    }
+
+    @media (max-width: 990px) {
+        font-size: 25px;
+        line-height: 35px;
+    }
+
+    @media (max-width: 890px) {
+        font-size: 25px;
+        line-height: 35px;
+    }
+
+    @media (max-width: 668px) {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    @media (max-width: 552px) {
+        font-size: 15px;
+        line-height: 25px;
+    }
+}
+
+footer {
+    @extend %lato;
+    @extend %white;
+    @extend %w100;
+    @extend %caps;
+    @extend %fs20;
+    @extend %tac;
+
+    height: 50px;
+    line-height: 50px;
+    background: rgb(0, 0, 0);
+}

@@ -1,0 +1,146 @@
+%bgw {
+	background: #fff;
+}
+%bk {
+	color: #000;
+}
+%wh {
+	color: #fff;
+}
+%db {
+	display: block;
+}
+%dn {
+	display: none;
+}
+%ffc {
+	font-family: "cinzel", serif;
+}
+%pl0 {
+	padding-left: 0;
+}
+%pa {
+	position: absolute;
+}
+%pr {
+	position: relative;
+}
+%tac {
+	text-align: center;
+}
+%tdn {
+	text-decoration: none;
+}
+%w100 {
+	width: 100%;
+}
+%w150 {
+	width: 150px;
+}
+* {
+	margin: 0;
+	padding: 0;
+	@extend %ffc; box-sizing: border-box;
+}
+ul {
+	li {
+		@extend %tdn; list-style-type: none;
+	}
+}
+nav {
+	position: fixed;
+	@extend %w100; padding: 20px;
+	@extend %ffc; @extend %bgw; z-index: 10;
+	a {
+		@extend %tdn; color: rgba(0, 0, 0, 0.558);
+		font-size: 20px;
+		font-weight: bold;
+	}
+	.cart-icon {
+		font-size: 16px;
+	}
+	.user-icon {
+		font-size: 16px;
+	}
+	.cart-container {
+		.cart-item-count {
+			@extend %pa; @extend %tac; bottom: 5px;
+			left: 26px;
+			font-size: 12px;
+			background-color: #f1f1f1;
+			border-radius: 50px;
+		}
+	}
+}
+.page-content {
+	@extend %bgw; padding: 100px 0px;
+}
+.page-title {
+	padding: 60px 0px 100px;
+	.title {
+		font-size: 60px;
+	}
+}
+.product-container {
+	flex-wrap: wrap;
+	padding: 0px 0px 100px;
+}
+.product-card {
+	@extend %pr; margin: 10px;
+	border: 10px solid rgb(210, 196, 182) !important;
+	overflow: hidden;
+	padding: 0px !important;
+	background: rgb(82, 53, 11);
+	&:nth-child(even) {
+		background: rgb(210, 196, 182);
+	}
+	.product-price {
+		@extend %pa; font-family: "lato", sans-serif;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		@extend %wh; text-transform: capitalize;
+		font-size: 50px;
+		opacity: 0;
+		transition: 0.5s;
+	}
+	&:hover {
+		.product-price {
+			opacity: 1;
+		}
+		.product-img {
+			opacity: 0.7;
+		}
+	}
+}
+.product-img {
+	@extend %w100; height: 100%;
+}
+@media (min-width: 1300) and (max-width: 1300) {
+	.product-card {
+		.product-price {
+			font-size: 50px;
+		}
+	}
+}
+@media (min-width: 800px) and (max-width: 1300) {
+	.product-card {
+		.product-price {
+			font-size: 40px;
+		}
+	}
+}
+@media (min-width: 992px) and (max-width: 1086px) {
+	.product-card {
+		.product-price {
+			font-size: 30px;
+		}
+	}
+}
+@media (max-width: 800px) {
+	.product-card {
+		.product-price {
+			font-size: 30px;
+		}
+	}
+}

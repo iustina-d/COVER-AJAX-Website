@@ -1,110 +1,126 @@
 * {
+  font-family: "cinzel", serif;
+}
+
+nav a, ul li {
+  text-decoration: none;
+}
+
+footer, .page-content .text-part, nav .side-menu, nav .cart-container .cart-item-count {
+  text-align: center;
+}
+
+.page-content, nav .side-menu, nav {
+  background-color: #fff;
+}
+
+nav .link:hover, nav .e-links:hover {
+  color: #000;
+}
+
+nav a {
+  font-size: 20px;
+}
+
+.page-content .text-part h2, nav a {
+  font-weight: bold;
+}
+
+nav .side-menu, nav .cart-container .cart-item-count {
+  position: absolute;
+}
+
+nav .side-menu, nav .e-links {
+  display: none;
+}
+
+* {
   margin: 0;
   padding: 0;
-  font-family: "cinzel", serif;
   box-sizing: border-box;
 }
-ul li{
-  text-decoration: none;
+
+ul li {
   list-style-type: none;
 }
-nav{
+
+nav {
   position: fixed;
   width: 100%;
   padding: 20px;
-  font-family: "cinzel", serif;
-  background-color: #fff;
 }
-nav a{
-  text-decoration: none;
+nav a {
   color: rgba(0, 0, 0, 0.558);
-  font-size: 20px;
-  font-weight: bold;
 }
-nav .cart-container{
+nav .cart-container {
   position: relative;
 }
-nav .cart-icon,nav .user-icon{
-  font-size: 16px;
-}
-nav .cart-container .cart-item-count{
-  position: absolute;
-  text-align: center;
+nav .cart-container .cart-item-count {
   bottom: 5px;
-  left:26px;
+  left: 26px;
   font-size: 12px;
   background-color: #f1f1f1;
   border-radius: 50px;
 }
-nav .e-links{
-  display: none;
+nav .cart-icon,
+nav .user-icon {
+  font-size: 16px;
 }
-nav .e-link:hover{
-  color:#000
-}
-nav .side-menu{
-  display: none;
-  position: absolute;
-  background-color: #fff;
-  width: 150px;
-  text-align: center;
-  padding-left: 0px;
-}
-nav .e-links:hover .side-menu{
+nav .e-links:hover .side-menu, nav .e-links:hover .side-menu.e-link {
   display: block;
-}
-nav .e-links:hover .side-menu.e-link{
-  display: block;
-} 
-nav .link:hover{
-  color: #000;
-}
-.page-content{
-  background-color: #fff;
-  padding:100px 0px;
-}
-.page-content .first-part,.page-content .second-part{
-  padding-bottom: 80px;
-}
-.page-content .text-part{
-  padding: 50px;
-  text-align: center;
-  
-}
-.page-content .text-part h2{
-  font-weight: bold;
-}
-.page-content .image-part{
-  padding: 50px;
-}
-footer{
-  background-color: #000;
-  color: #fff;
-  text-align: center;
-  text-transform: capitalize;
-  padding: 13px;
 }
 @media (max-width: 1805px) {
-  nav .link{
-    display: none;
-  }
-  nav .e-links{
+  nav .e-links {
     display: block;
   }
 }
-@media (max-width: 991px) and (min-width:500px) {
-  .page-content .text-part h2{
-    font-size:36px ;
+nav .side-menu {
+  width: 150px;
+  padding-left: 0px;
+}
+@media (max-width: 1805px) {
+  nav .link {
+    display: none;
   }
-  .page-content .text-part p{
+}
+
+.page-content {
+  padding: 100px 0px;
+}
+.page-content .first-part,
+.page-content .second-part {
+  padding-bottom: 80px;
+}
+.page-content .text-part {
+  padding: 50px;
+}
+@media (max-width: 991px) and (min-width: 500px) {
+  .page-content .text-part h2 {
+    font-size: 36px;
+  }
+}
+@media (max-width: 500px) {
+  .page-content .text-part h2 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 991px) and (min-width: 500px) {
+  .page-content .text-part p {
     font-size: 18px;
   }
 }
 @media (max-width: 500px) {
-  .page-content .text-part h2{
-    font-size:20px ;
-  }
-  .page-content .text-part p{
+  .page-content .text-part p {
     font-size: 12px;
   }
+}
+.page-content .image-part {
+  padding: 50px;
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  text-transform: capitalize;
+  padding: 13px;
 }

@@ -4,20 +4,30 @@
   font-family: "cinzel", serif;
   box-sizing: border-box;
 }
+
 body {
   padding: 5rem;
-  background-color: rgb(237 237 237);
+  background-color: rgb(237, 237, 237);
 }
-.x-close{
+
+.x-close {
   text-decoration: none;
 }
-.fa-xmark {
+
+form .pay-method, form, .container a .fa-xmark, .fa-xmark {
   display: flex;
+}
+
+.fa-xmark {
   font-size: 20px;
   color: rgba(0, 0, 0, 0.776);
 }
-h1{
+
+form, h1 {
   text-align: center;
+}
+
+h1 {
   padding: 50px 0px;
 }
 
@@ -30,55 +40,59 @@ h1{
   transform: scale(1.2);
 }
 
-.container a .fa-xmark {
-  display: flex;
-  justify-content: flex-end;
+form h2, .container a .fa-xmark {
   font-size: 2rem;
 }
+
+.container a .fa-xmark {
+  justify-content: flex-end;
+}
+
 .fa-xmark:hover,
 .fa-arrow-up:hover,
 .fa-arrow-down:hover {
-  color: rgb(124 121 121);
+  color: rgb(124, 121, 121);
 }
-form {
-  display: flex;
-  text-align: center;
-  justify-content: space-around;
+
+form .pay-method, form {
   align-items: center;
+}
+
+form {
+  justify-content: space-around;
 }
 form h2 {
-  font-size: 2rem;
   margin-right: 2rem;
 }
+@media (max-width: 1200px) {
+  form h2 {
+    font-size: 25px;
+  }
+}
+@media (max-width: 992px) {
+  form h2 {
+    font-size: 20px;
+  }
+}
 form .pay-method {
-  display: flex;
-  align-items: center;
   justify-content: center;
 }
 form .pay-method .btn {
   background-color: #3d3f56;
   color: #fff;
   padding: 10px 40px;
-  /* margin-top: 0 !important; */
 }
 form .pay-method h3 {
   margin: 1rem;
   font-size: 26px;
 }
-
-@media (max-width:1200px){
-  form h2{
-    font-size: 25px;
-  }
-  form .pay-method h3{
+@media (max-width: 1200px) {
+  form .pay-method h3 {
     font-size: 19px;
   }
 }
-@media (max-width:992px){
-  form h2{
-    font-size: 20px;
-  }
-  form .pay-method h3{
+@media (max-width: 992px) {
+  form .pay-method h3 {
     display: none;
   }
 }

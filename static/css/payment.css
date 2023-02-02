@@ -1,161 +1,266 @@
 * {
   margin: 0;
+}
+
+* {
   padding: 0;
+}
+
+.payment-method .second-part form .btn-submit, .payment-method .first-part .top, .payment-container, .container-fluid, img {
+  width: 100%;
+}
+
+.payment-method, img {
+  height: 100%;
+}
+
+.payment-method .first-part, .payment-method {
+  display: block;
+}
+
+.payment-method .second-part .icons .btn, .payment-method, .section-two .message-container:hover, .container-fluid {
+  background-color: #fff;
+}
+
+.payment-method .second-part form .btn-submit {
+  color: #fff;
+}
+
+.payment-method .second-part form .btn-submit:hover, .payment-method .second-part .icons .active, .payment-method .second-part .icons .second:hover, .payment-info-container {
+  background-color: #3d3f56;
+}
+
+.add-icon:hover, .payment-method .second-part .icons .btn, .payment-method h2, .payment-method .first-part .top i:hover {
+  color: #3d3f56;
+}
+
+.payment-method .second-part form .btn-submit, .section-two .message-container {
+  background-color: #000;
+}
+
+.payment-method .bottom h3, .section-two .message-container:hover {
+  color: #000;
+}
+
+.payment-method .second-part .icons, .payment-method .bottom, .payment-method .first-part .top, .section-two .message-container, .payment-info-container .section-two, .payment-container .first-part, .payment-container {
+  display: flex;
+}
+
+.payment-method .bottom, .payment-method .first-part .top, .payment-info-container .section-two, .payment-container .first-part {
+  justify-content: space-between;
+}
+
+.payment-container h3, .payment-container .first-part h4 {
+  font-size: 14px;
+}
+
+.payment-info-container h2, .payment-container .second-part h4 {
+  font-size: 16px;
+}
+
+.payment-method .second-part .icons .btn, .payment-method h2 {
+  font-size: 20px;
+}
+
+.payment-method h2, .payment-info-container h2, .payment-container .second-part h4, .payment-container .first-part h4 {
+  font-weight: bold;
+}
+
+.payment-container .line, .payment-container .first-part h4 {
+  opacity: 1;
+}
+
+.payment-method .bottom h3, .payment-container .second-part h3, .calendar-icon, .notes-icon {
+  display: inline-block;
+}
+
+.payment-method .first-part .top i, .section-two .message-container .massage-icon, .calendar-icon, .notes-icon {
+  height: 16px;
+}
+
+.payment-method .second-part .icons .btn, .payment-method .second-part .icons .add-icon {
+  margin-left: 20px;
+}
+
+.calendar-icon, .notes-icon {
+  width: 14px;
+}
+
+.payment-method .second-part .icons, .section-two .message-container {
+  align-items: center;
+}
+
+.payment-method .second-part form, .payment-method .bottom, .payment-method, .section-two .message-container {
+  position: relative;
+}
+
+.payment-method .second-part form .account-icon, .payment-method .second-part form .lock-icon, .payment-method .second-part form .master-card {
+  position: absolute;
+}
+
+.add-icon:hover, .section-two .message-container {
+  border-radius: 50%;
+}
+
+.payment-method .bottom h3, .payment-method .first-part .top i {
+  cursor: pointer;
+}
+
+.payment-method .second-part form .master-card {
+  width: 40px;
+}
+
+.payment-method .second-part form .btn-submit, .payment-method .second-part form .account-icon, .payment-method .second-part form .master-card {
+  height: 40px;
+}
+
+.payment-method .second-part form .account-icon, .payment-method .second-part form .lock-icon {
+  width: 30px;
+}
+
+.payment-method .second-part form .lock-icon {
+  height: 30px;
+}
+
+.payment-method .second-part form .account-icon, .payment-method .second-part form .lock-icon {
+  right: 0;
+}
+
+.payment-method .second-part form .btn-submit, .payment-method .second-part .icons .add-icon {
+  border: none;
+}
+
+* {
   box-sizing: border-box;
 }
-a {
-  width: 100%;
-  height: 100%;
-}
+
 img {
-  width: 100%;
-  height: 100%;
   min-width: 40px;
   max-width: 56px;
 }
-.container-fluid{
-  background-color: #fff;
-  width: 100%;
+
+.container-fluid {
   height: 100vh;
 }
+
 .payment-container {
-  display: flex;
   padding: 20px 10px;
   height: 70%;
-  width: 100%;
   background-color: #f1f1f1;
   font-family: "cinzel", serif;
   border-radius: 25px;
 }
-.payment-component{
-  height: 100%;
+@media (max-width: 991px) {
+  .payment-container {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 20px !important;
+  }
 }
+@media (max-width: 1368px) and (min-width: 992px) {
+  .payment-container .first-part h4 {
+    font-size: 12px;
+  }
+}
+.payment-container h3 {
+  font-weight: 300;
+}
+@media (max-width: 1368px) and (min-width: 992px) {
+  .payment-container h3 {
+    font-size: 12px;
+  }
+}
+.payment-container .line {
+  border: 1px solid #fff;
+}
+.payment-container .second-part h3 {
+  margin-left: 5px;
+}
+@media (max-width: 1368px) and (min-width: 992px) {
+  .payment-container .second-part h3 {
+    font-size: 12px;
+  }
+}
+@media (max-width: 1368px) and (min-width: 992px) {
+  .payment-container .second-part h4 {
+    font-size: 14px;
+  }
+}
+
 .payment-info {
   width: 350px;
   height: 95%;
   padding: 80px 0px 0px;
-  color: #fff;
 }
+
 .payment-info-container {
-  background-color: #3d3f56;
   padding: 50px 40px;
-  height: 100%;
 }
 .payment-info-container .first-part {
   height: 50%;
 }
 .payment-info-container .section-two {
   height: 40%;
-  display: flex;
   align-items: flex-end;
-  justify-content: space-between;
 }
-.payment-info-container h2 {
-  font-size: 16px;
-  font-weight: bold;
+@media (max-width: 1368px) and (min-width: 992px) {
+  .payment-info-container h2 {
+    font-size: 14px;
+  }
 }
-.payment-container .first-part {
-  display: flex;
-  justify-content: space-between;
-}
-.payment-container h3 {
-  font-size: 14px;
-  font-weight: 300;
-}
-.payment-container .first-part h4 {
-  font-size: 14px;
-  font-weight: bold;
-  opacity: 1;
-}
-.payment-container .line {
-  border: 1px solid #fff;
-  opacity: 1;
-}
-.notes-icon,
-.calendar-icon {
-  display: inline-block;
-  width: 14px;
-  height: 16px;
-  color: #fff;
-}
-.payment-container .second-part h3 {
-  display: inline-block;
-  margin-left: 5px;
-}
-.payment-container .second-part h4 {
-  font-size: 16px;
-  font-weight: bold;
-}
+
 .section-two h3 {
   width: 150px;
 }
+@media (max-width: 1368px) and (min-width: 992px) {
+  .section-two h3 {
+    font-size: 12px;
+  }
+}
 .section-two .message-container {
-  display: flex;
-  align-items: center;
   justify-content: center;
-  position: relative;
-  background-color: #000;
   width: 50px;
   height: 50px;
-  border-radius: 50%;
 }
 .section-two .message-container .massage-icon {
   inset: 0;
   width: 16px;
-  height: 16px;
-}
-.section-two .message-container:hover {
-  background-color: #fff;
-  color: #000;
 }
 .payment-method {
-  display: block;
-  position: relative;
-  padding: 0px;
-  background-color: #fff;
   width: 450px;
-  height: 100%;
   padding: 50px 30px 30px;
 }
-.payment-method .first-part {
-  display: block;
+@media (max-width: 991px) {
+  .payment-method {
+    background-color: #fff;
+    border: 10px solid #f1f1f1;
+    border-top: none;
+  }
 }
 .payment-method .first-part .top {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
   margin-bottom: 40px;
   padding: 0px 10px 0px 20px;
 }
-.payment-method h2 {
-  color: #3d3f56;
-  font-size: 20px;
-  font-weight: bold;
-}
 .payment-method .first-part .top i {
-  color: #3d3f568a;
+  color: rgba(61, 63, 86, 0.5411764706);
   transition: all 0.5s;
-  height: 16px;
-  cursor: pointer;
 }
-.payment-method .first-part .top i:hover {
-  color: #3d3f56;
-}
-.payment-method .bottom {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
+@media (max-width: 1368px) and (min-width: 992px) {
+  .payment-method h2 {
+    font-size: 16px;
+  }
 }
 .payment-method .bottom h3 {
-  display: inline-block;
-  margin: 0;
   margin-left: 10px;
-  color: #000;
   font-weight: 400;
-  cursor: pointer;
+}
+@media (max-width: 1368px) and (min-width: 992px) {
+  .payment-method .bottom h3 {
+    font-size: 12px;
+  }
 }
 .payment-method .bottom .left .active {
-  color: #3d3f56b7;
+  color: rgba(61, 63, 86, 0.7176470588);
   border-bottom: 2px solid #000;
 }
 .payment-method .line {
@@ -163,27 +268,19 @@ img {
   margin-top: 0;
 }
 .payment-method .second-part .icons {
-  display: flex;
-  align-items: center;
   justify-content: flex-start;
 }
 .payment-method .second-part .icons .add-icon {
-  margin-left: 20px;
   font-size: 40px;
-  border: none;
-}
-.add-icon:hover {
-  color: #3d3f56;
-  border-radius: 50%;
-  background-color: transparent;
 }
 .payment-method .second-part .icons .btn {
-  background-color: #fff;
-  color: #3d3f56;
   border: 1px solid #3d3f56;
-  margin-left: 20px;
-  font-size: 20px;
   padding: 5px 10px;
+}
+@media (max-width: 1368px) and (min-width: 992px) {
+  .payment-method .second-part .icons .btn {
+    font-size: 16px;
+  }
 }
 .payment-method .second-part .icons .first {
   border-top-left-radius: 30px;
@@ -193,70 +290,29 @@ img {
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
 }
-.payment-method .second-part .icons .active,
-.payment-method .second-part .icons .second:hover {
-  background-color: #3d3f56;
-  color: #fff;
-}
-.payment-method .second-part form {
-  position: relative;
-}
 .payment-method .second-part form input:focus {
   border: 2px solid #3d3f56;
   box-shadow: 0px 0px 1rem #3d3f56;
 }
 .payment-method .second-part form .master-card {
-  position: absolute;
   top: 47px;
   right: 8px;
-  width: 40px;
-  height: 40px;
 }
 .payment-method .second-part form .lock-icon {
-  position: absolute;
   top: 145px;
-  right: 0px;
-  width: 30px;
-  height: 30px;
 }
 .payment-method .second-part form .account-icon {
-  position: absolute;
   bottom: 60px;
-  right: 0px;
-  width: 30px;
-  height: 40px;
 }
 .payment-method .second-part form .btn-submit {
-  background-color: #000;
-  color: #fff;
-  border: none;
-  width: 100%;
-  height: 40px;
   margin-top: 10px;
 }
-.payment-method .second-part form .btn-submit:hover {
-  background-color: #3d3f56;
+.add-icon:hover {
+  background-color: transparent;
 }
-@media (max-width: 1368px) and (min-width:992px) {
-  .payment-info-container h2,label,.payment-container .second-part h4{
+
+@media (max-width: 1368px) and (min-width: 992px) {
+  label {
     font-size: 14px;
-  }
-  .payment-method h2 ,.payment-method .second-part .icons .btn{
-    font-size: 16px;
-  }
-  .payment-container h3,.payment-container .second-part h3,.section-two h3,.payment-method .bottom h3,.payment-container .first-part h4{
-    font-size: 12px;
-  }
-}
-@media (max-width: 991px) {
-  .payment-container{
-    height: 100%;
-    width: 100%;
-    padding-bottom: 20px !important;
-  }
-  .payment-method{
-    background-color: #fff ;
-    border: 10px solid #f1f1f1;
-    border-top: none;
   }
 }

@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "cinzel", serif;
+    box-sizing: border-box;
+}
+
+%tdn {
+    text-decoration: none;
+}
+
+%hide {
+    display: none;
+}
+
+%white {
+    color: #fff;
+}
+
+%bgwhite {
+    background-color: #fff;
+}
+
+%bold {
+    font-weight: bold;
+}
+
+%absolute {
+    position: absolute;
+}
+
+%bgblack {
+    background-color: #000;
+}
+
+%black {
+    color: #000;
+}
+
+%textcenter {
+    text-align: center;
+}
+
+%block {
+    display: block;
+}
+
+ul li {
+    @extend %tdn;
+    list-style-type: none;
+}
+
+nav {
+    @extend %bgwhite;
+
+    position: fixed;
+    width: 100vw;
+    padding: 20px;
+
+    a {
+        @extend %tdn;
+        @extend %bold;
+
+        color: rgba(0, 0, 0, 0.558);
+        font-size: 20px;
+    }
+
+    .cart-container {
+        position: relative;
+
+        .cart-item-count {
+            @extend %absolute;
+
+            bottom: 5px;
+            left: 26px;
+            font-size: 12px;
+            background-color: #f1f1f1;
+            border-radius: 50px;
+        }
+    }
+
+    .cart-icon,
+    .user-icon {
+        font-size: 16px;
+    }
+
+    .e-links {
+        @extend %hide;
+
+        &:hover {
+            @extend %black;
+
+            .side-menu {
+                @extend %block;
+
+                &.e-link {
+                    @extend %block;
+                }
+            }
+        }
+
+        @media (max-width: 1805px) {
+            display: block;
+        }
+    }
+
+    .side-menu {
+        @extend %hide;
+        @extend %absolute;
+        @extend %bgwhite;
+        @extend %textcenter;
+
+        width: 150px;
+        padding-left: 0px;
+    }
+
+    .link {
+        &:hover {
+            @extend %black;
+        }
+
+        @media (max-width: 1805px) {
+            display: none;
+        }
+    }
+}
+
+.page-content {
+    @extend %bgwhite;
+    padding: 160px 0px 100px;
+    height: 94.7vh;
+    width: 90%;
+}
+
+%input {
+    border: none;
+    border-bottom: 2px solid #f1f1f1;
+    padding: 20px 50px 20px 10px;
+}
+
+%outline {
+    outline: none;
+    border-color: #000;
+}
+
+.left-part {
+    h2 {
+        @extend %bold;
+
+        padding-bottom: 30px;
+
+        @media (max-width: 1094px) {
+            font-size: 20px;
+        }
+    }
+
+    input {
+        @extend %input;
+
+        &:focus {
+            @extend %outline;
+        }
+
+        @media (max-width: 1094px) {
+            padding-right: 40px;
+        }
+    }
+
+    textarea {
+        @extend %input;
+        padding-right: 250px;
+        padding-bottom: 50px;
+        text-align: start;
+
+        &:focus {
+            @extend %outline;
+        }
+
+        @media (max-width: 1094px) {
+            padding-right: 150px;
+        }
+    }
+
+    .btn {
+        @extend %bgblack;
+        @extend %white;
+
+        margin-top: 20px;
+        padding: 10px 20px;
+        border-radius: 25px;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            background-color: #3d3f56;
+        }
+    }
+}
+
+%dib {
+    display: inline-block;
+}
+
+.right-part {
+    padding: 70px 0px 0px 30px;
+
+    & > h2 {
+        @extend %bold;
+
+        margin-bottom: 30px;
+
+        @media (max-width: 1094px) {
+            font-size: 20px;
+        }
+    }
+
+    .info {
+        margin-top: 10px;
+    }
+
+    h3 {
+        @extend %dib;
+        font-size: 14px;
+
+        @media (max-width: 1094px) {
+            font-size: 12px;
+        }
+    }
+
+    .icon {
+        @extend %dib;
+    }
+
+    @media (max-width: 1094px) {
+        padding-left: 0px;
+    }
+}
+
+footer {
+    @extend %bgblack;
+    @extend %white;
+    @extend %textcenter;
+
+    text-transform: capitalize;
+    padding: 13px;
+}

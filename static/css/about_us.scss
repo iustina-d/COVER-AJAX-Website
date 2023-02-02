@@ -1,0 +1,162 @@
+%fontfamily {
+    font-family: "cinzel", serif;
+}
+%textdecoration {
+    text-decoration: none;
+}
+%textcenter {
+    text-align: center;
+}
+%bgwhite {
+    background-color: #fff;
+}
+%black {
+    color: #000;
+}
+%fs20 {
+    font-size: 20px;
+}
+%bold {
+    font-weight: bold;
+}
+%absolute {
+    position: absolute;
+}
+%displaynone {
+    display: none;
+}
+
+* {
+    @extend %fontfamily;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul li {
+    @extend %textdecoration;
+
+    list-style-type: none;
+}
+nav {
+    @extend %fontfamily;
+    @extend %bgwhite;
+
+    position: fixed;
+    width: 100%;
+    padding: 20px;
+
+    a {
+        @extend %textdecoration;
+        @extend %fs20;
+        @extend %bold;
+
+        color: rgba(0, 0, 0, 0.558);
+    }
+
+    .cart-container {
+        position: relative;
+
+        .cart-item-count {
+            @extend %absolute;
+            @extend %textcenter;
+
+            bottom: 5px;
+            left: 26px;
+            font-size: 12px;
+            background-color: #f1f1f1;
+            border-radius: 50px;
+        }
+    }
+
+    .cart-icon,
+    .user-icon {
+        font-size: 16px;
+    }
+
+    .e-links {
+        @extend %displaynone;
+
+        &:hover {
+            @extend %black;
+
+            .side-menu {
+                &,
+                &.e-link {
+                    display: block;
+                }
+            }
+        }
+
+        @media (max-width: 1805px) {
+            display: block;
+        }
+    }
+
+    .side-menu {
+        @extend %displaynone;
+        @extend %absolute;
+        @extend %bgwhite;
+        @extend %textcenter;
+
+        width: 150px;
+        padding-left: 0px;
+    }
+
+    .link {
+        &:hover {
+            @extend %black;
+        }
+
+        @media (max-width: 1805px) {
+            display: none;
+        }
+    }
+}
+.page-content {
+    @extend %bgwhite;
+    padding: 100px 0px;
+
+    .first-part,
+    .second-part {
+        padding-bottom: 80px;
+    }
+
+    .text-part {
+        @extend %textcenter;
+        padding: 50px;
+
+        h2 {
+            @extend %bold;
+
+            @media (max-width: 991px) and (min-width: 500px) {
+                font-size: 36px;
+            }
+
+            @media (max-width: 500px) {
+                font-size: 20px;
+            }
+        }
+
+        p {
+            @media (max-width: 991px) and (min-width: 500px) {
+                font-size: 18px;
+            }
+
+            @media (max-width: 500px) {
+                font-size: 12px;
+            }
+        }
+    }
+    .image-part {
+        padding: 50px;
+    }
+}
+
+footer {
+    @extend %textcenter;
+
+    background-color: #000;
+    color: #fff;
+    text-transform: capitalize;
+    padding: 13px;
+}
