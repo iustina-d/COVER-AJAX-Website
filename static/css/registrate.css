@@ -12,7 +12,6 @@ img {
   max-width: 100%;
   width: 100%;
 }
-
 .content {
   font-family: "Inter", sans-serif;
   font-size: 16px;
@@ -68,7 +67,6 @@ button {
   padding: 0.625rem 1.25rem;
   width: 100%;
 }
-
 .container form input:focus {
   border-color: #3f3d56;
 }

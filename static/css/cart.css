@@ -59,13 +59,11 @@ form .pay-method .btn {
   background-color: #3d3f56;
   color: #fff;
   padding: 10px 40px;
-  /* margin-top: 0 !important; */
 }
 form .pay-method h3 {
   margin: 1rem;
   font-size: 26px;
 }
-
 @media (max-width:1200px){
   form h2{
     font-size: 25px;

@@ -29,6 +29,9 @@ nav.bg {
 nav.bg a {
   color: rgba(0, 0, 0, 0.558);
 }
+nav.bg a:hover {
+  color: rgb(0, 0, 0);
+}
 nav .cart-container {
   position: relative;
 }
