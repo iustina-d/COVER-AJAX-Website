@@ -2,6 +2,10 @@ import os
 from flask import Flask,render_template
 import os
 import data_manager as data_manager
+<<<<<<< HEAD
+=======
+from flask_sqlalchemy import SQLAlchemy
+>>>>>>> ca74dae97c886151def92ffb0f7202e31b5c7e8d
 
 app = Flask(__name__)
 app.secret_key = "aegsrg-wr+a7 na7"
