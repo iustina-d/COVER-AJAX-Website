@@ -1,2 +1,27 @@
-source `https://rubygems.org`
-gem `github-pages`
+GEM
+  remote: https://rubygems.org/
+  specs:
+    actionpack (2.3.8)
+      activesupport (= 2.3.8)
+      rack (~> 1.1.0)
+    activemerchant (1.15.0)
+      activesupport (>= 2.3.8)
+      braintree (>= 2.0.0)
+      builder (>= 2.0.0)
+    activesupport (2.3.8)
+    braintree (4.10.0)
+      builder (>= 3.2.4)
+      rexml (>= 3.1.9)
+    builder (3.2.4)
+    rack (1.1.6)
+    rexml (3.2.5)
+
+PLATFORMS
+  x86_64-linux
+
+DEPENDENCIES
+  actionpack (= 2.3.8)
+  activemerchant
+
+BUNDLED WITH
+   2.4.6
