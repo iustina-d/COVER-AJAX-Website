@@ -1,0 +1,31 @@
+#!/nix/store/z65l1jqvxa58zzwwa3bvglb6asj4y8cv-python3-3.8.5/bin/python3.8
+
+# $Id: rst2odt.py 5839 2009-01-07 19:09:28Z dkuhlman $
+# Author: Dave Kuhlman <dkuhlman@rexx.com>
+# Copyright: This module has been placed in the public domain.
+
+"""
+A front end to the Docutils Publisher, producing OpenOffice documents.
+"""
+
+import sys;import site;import functools;sys.argv[0] = '/nix/store/01wmpmcl64yija6f8darlwzbrnmgryrb-python3.8-docutils-0.16/bin/rst2odt.py';functools.reduce(lambda k, p: site.addsitedir(p, k), ['/nix/store/01wmpmcl64yija6f8darlwzbrnmgryrb-python3.8-docutils-0.16/lib/python3.8/site-packages'], site._init_pathinfo());
+import sys
+try:
+    import locale
+    locale.setlocale(locale.LC_ALL, '')
+except:
+    pass
+
+from docutils.core import publish_cmdline_to_binary, default_description
+from docutils.writers.odf_odt import Writer, Reader
+
+
+description = ('Generates OpenDocument/OpenOffice/ODF documents from '
+               'standalone reStructuredText sources.  ' + default_description)
+
+
+writer = Writer()
+reader = Reader()
+output = publish_cmdline_to_binary(reader=reader, writer=writer,
+    description=description)
+

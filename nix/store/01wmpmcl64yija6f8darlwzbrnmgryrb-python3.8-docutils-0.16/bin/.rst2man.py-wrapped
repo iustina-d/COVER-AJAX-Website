@@ -1,0 +1,27 @@
+#!/nix/store/z65l1jqvxa58zzwwa3bvglb6asj4y8cv-python3-3.8.5/bin/python3.8
+
+# Author:
+# Contact: grubert@users.sf.net
+# Copyright: This module has been placed in the public domain.
+
+"""
+man.py
+======
+
+This module provides a simple command line interface that uses the
+man page writer to output from ReStructuredText source.
+"""
+
+import sys;import site;import functools;sys.argv[0] = '/nix/store/01wmpmcl64yija6f8darlwzbrnmgryrb-python3.8-docutils-0.16/bin/rst2man.py';functools.reduce(lambda k, p: site.addsitedir(p, k), ['/nix/store/01wmpmcl64yija6f8darlwzbrnmgryrb-python3.8-docutils-0.16/lib/python3.8/site-packages'], site._init_pathinfo());
+import locale
+try:
+    locale.setlocale(locale.LC_ALL, '')
+except:
+    pass
+
+from docutils.core import publish_cmdline, default_description
+from docutils.writers import manpage
+
+description = ("Generates plain unix manual documents.  " + default_description)
+
+publish_cmdline(writer=manpage.Writer(), description=description)

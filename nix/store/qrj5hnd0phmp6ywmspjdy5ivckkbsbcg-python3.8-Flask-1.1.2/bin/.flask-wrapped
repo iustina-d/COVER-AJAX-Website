@@ -1,0 +1,9 @@
+#!/nix/store/z65l1jqvxa58zzwwa3bvglb6asj4y8cv-python3-3.8.5/bin/python3.8
+# -*- coding: utf-8 -*-
+import sys;import site;import functools;sys.argv[0] = '/nix/store/qrj5hnd0phmp6ywmspjdy5ivckkbsbcg-python3.8-Flask-1.1.2/bin/flask';functools.reduce(lambda k, p: site.addsitedir(p, k), ['/nix/store/qrj5hnd0phmp6ywmspjdy5ivckkbsbcg-python3.8-Flask-1.1.2/lib/python3.8/site-packages','/nix/store/li68c2kd0xsmbisp21a3ayh6s1wdp7gm-python3.8-itsdangerous-1.1.0/lib/python3.8/site-packages','/nix/store/h5r8kidqs789jafr6mbh65gz93ccifdl-python3.8-click-8.1.3/lib/python3.8/site-packages','/nix/store/zachx9ik7jw6bwnl00mjf940s5pfz8xl-python3.8-importlib-metadata-1.7.0/lib/python3.8/site-packages','/nix/store/fxdp5ynk0v1l0cxpss4p7ij53b9yh4c3-python3.8-zipp-3.1.0/lib/python3.8/site-packages','/nix/store/k0hakfhmyj6k5jm7d4b6k9j0vlfm75hy-python3.8-more-itertools-8.4.0/lib/python3.8/site-packages','/nix/store/md9ld5w5s4dkqkm0rjbsqrlzlhyjiq4y-python3.8-six-1.15.0/lib/python3.8/site-packages','/nix/store/1gj15j922jvayc6429l4q3r0qsihpgwz-python3.8-Werkzeug-1.0.1/lib/python3.8/site-packages','/nix/store/0ap259vpq93rz78d386h04hydiqm0k6c-python3.8-Jinja2-2.11.2/lib/python3.8/site-packages','/nix/store/59sfp24y23v202kb7sjbbqdp5dvzn24m-python3.8-MarkupSafe-1.1.1/lib/python3.8/site-packages','/nix/store/vliz92p6b5ykk3xqyd8rr6kiv50flfnd-python3.8-setuptools-47.3.1/lib/python3.8/site-packages'], site._init_pathinfo());
+import re
+import sys
+from flask.cli import main
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
+    sys.exit(main())

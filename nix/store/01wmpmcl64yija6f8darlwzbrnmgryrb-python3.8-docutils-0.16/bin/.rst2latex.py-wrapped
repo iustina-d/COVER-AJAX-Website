@@ -1,0 +1,27 @@
+#!/nix/store/z65l1jqvxa58zzwwa3bvglb6asj4y8cv-python3-3.8.5/bin/python3.8
+
+# $Id: rst2latex.py 5905 2009-04-16 12:04:49Z milde $
+# Author: David Goodger <goodger@python.org>
+# Copyright: This module has been placed in the public domain.
+
+"""
+A minimal front end to the Docutils Publisher, producing LaTeX.
+"""
+
+import sys;import site;import functools;sys.argv[0] = '/nix/store/01wmpmcl64yija6f8darlwzbrnmgryrb-python3.8-docutils-0.16/bin/rst2latex.py';functools.reduce(lambda k, p: site.addsitedir(p, k), ['/nix/store/01wmpmcl64yija6f8darlwzbrnmgryrb-python3.8-docutils-0.16/lib/python3.8/site-packages'], site._init_pathinfo());
+try:
+    import locale
+    locale.setlocale(locale.LC_ALL, '')
+except:
+    pass
+
+from docutils.core import publish_cmdline
+
+description = ('Generates LaTeX documents from standalone reStructuredText '
+               'sources. '
+               'Reads from <source> (default is stdin) and writes to '
+               '<destination> (default is stdout).  See '
+               '<http://docutils.sourceforge.net/docs/user/latex.html> for '
+               'the full reference.')
+
+publish_cmdline(writer_name='latex', description=description)

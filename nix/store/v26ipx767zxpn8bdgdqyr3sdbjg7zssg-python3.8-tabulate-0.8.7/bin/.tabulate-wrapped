@@ -1,0 +1,9 @@
+#!/nix/store/z65l1jqvxa58zzwwa3bvglb6asj4y8cv-python3-3.8.5/bin/python3.8
+# -*- coding: utf-8 -*-
+import sys;import site;import functools;sys.argv[0] = '/nix/store/v26ipx767zxpn8bdgdqyr3sdbjg7zssg-python3.8-tabulate-0.8.7/bin/tabulate';functools.reduce(lambda k, p: site.addsitedir(p, k), ['/nix/store/v26ipx767zxpn8bdgdqyr3sdbjg7zssg-python3.8-tabulate-0.8.7/lib/python3.8/site-packages'], site._init_pathinfo());
+import re
+import sys
+from tabulate import _main
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
+    sys.exit(_main())

@@ -1,0 +1,11 @@
+prefix=/nix/store/s0mblhs5vmjza9dmipn74rwqflxy1fw7-libffi-3.3
+exec_prefix=${prefix}
+libdir=/nix/store/s0mblhs5vmjza9dmipn74rwqflxy1fw7-libffi-3.3/lib
+toolexeclibdir=${libdir}/../lib64
+includedir=/nix/store/1vddffb7x5bvw1wlyz4rk4fz3pmmbdsh-libffi-3.3-dev/include
+
+Name: libffi
+Description: Library supporting Foreign Function Interfaces
+Version: 3.3
+Libs: -L${toolexeclibdir} -lffi
+Cflags: -I${includedir}

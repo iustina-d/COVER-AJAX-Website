@@ -1,0 +1,4 @@
+#! /nix/store/2jysm3dfsgby5sw5jgj43qjrb5v79ms9-bash-4.4-p23/bin/bash -e
+export PATH='/nix/store/z65l1jqvxa58zzwwa3bvglb6asj4y8cv-python3-3.8.5/bin:/nix/store/y1507hnvad0w7gxiy6157m9axd45nxl2-python3.8-faraday-plugins-1.10.0/bin:/nix/store/9wp5lrvad52cvg6ms3pmq0qki3a22gpn-python3.8-chardet-3.0.4/bin:/nix/store/i3mawgdjpy2yy3kjw4d4lbi87b474wd6-python3.8-html2text-2020.1.16/bin:/nix/store/v26ipx767zxpn8bdgdqyr3sdbjg7zssg-python3.8-tabulate-0.8.7/bin'${PATH:+':'}$PATH
+export PYTHONNOUSERSITE='true'
+exec -a "$0" "/nix/store/y1507hnvad0w7gxiy6157m9axd45nxl2-python3.8-faraday-plugins-1.10.0/bin/.faraday-plugins-wrapped"  "$@"

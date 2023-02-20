@@ -1,0 +1,13 @@
+# See: man pkg-config
+prefix=/nix/store/z65l1jqvxa58zzwwa3bvglb6asj4y8cv-python3-3.8.5
+exec_prefix=${prefix}
+libdir=/nix/store/z65l1jqvxa58zzwwa3bvglb6asj4y8cv-python3-3.8.5/lib
+includedir=/nix/store/z65l1jqvxa58zzwwa3bvglb6asj4y8cv-python3-3.8.5/include
+
+Name: Python
+Description: Embed Python into an application
+Requires:
+Version: 3.8
+Libs.private: -lpthread -ldl -lcrypt -lncurses -lutil -lm
+Libs: -L${libdir} -lpython3.8
+Cflags: -I${includedir}/python3.8

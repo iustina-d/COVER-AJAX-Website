@@ -1,0 +1,4 @@
+#! /nix/store/2jysm3dfsgby5sw5jgj43qjrb5v79ms9-bash-4.4-p23/bin/bash -e
+export PATH='/nix/store/z65l1jqvxa58zzwwa3bvglb6asj4y8cv-python3-3.8.5/bin:/nix/store/h41gbxdavmgjgr2r31qp43x9bl3xhlyx-python3.8-distro-1.5.0/bin'${PATH:+':'}$PATH
+export PYTHONNOUSERSITE='true'
+exec -a "$0" "/nix/store/h41gbxdavmgjgr2r31qp43x9bl3xhlyx-python3.8-distro-1.5.0/bin/.distro-wrapped"  "$@"

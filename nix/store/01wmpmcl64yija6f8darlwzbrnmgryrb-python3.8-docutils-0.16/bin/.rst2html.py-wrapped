@@ -1,0 +1,24 @@
+#!/nix/store/z65l1jqvxa58zzwwa3bvglb6asj4y8cv-python3-3.8.5/bin/python3.8
+
+# $Id: rst2html.py 4564 2006-05-21 20:44:42Z wiemann $
+# Author: David Goodger <goodger@python.org>
+# Copyright: This module has been placed in the public domain.
+
+"""
+A minimal front end to the Docutils Publisher, producing HTML.
+"""
+
+import sys;import site;import functools;sys.argv[0] = '/nix/store/01wmpmcl64yija6f8darlwzbrnmgryrb-python3.8-docutils-0.16/bin/rst2html.py';functools.reduce(lambda k, p: site.addsitedir(p, k), ['/nix/store/01wmpmcl64yija6f8darlwzbrnmgryrb-python3.8-docutils-0.16/lib/python3.8/site-packages'], site._init_pathinfo());
+try:
+    import locale
+    locale.setlocale(locale.LC_ALL, '')
+except:
+    pass
+
+from docutils.core import publish_cmdline, default_description
+
+
+description = ('Generates (X)HTML documents from standalone reStructuredText '
+               'sources.  ' + default_description)
+
+publish_cmdline(writer_name='html', description=description)

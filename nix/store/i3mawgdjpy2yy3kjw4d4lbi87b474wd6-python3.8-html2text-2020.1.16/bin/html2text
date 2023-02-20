@@ -1,0 +1,4 @@
+#! /nix/store/2jysm3dfsgby5sw5jgj43qjrb5v79ms9-bash-4.4-p23/bin/bash -e
+export PATH='/nix/store/z65l1jqvxa58zzwwa3bvglb6asj4y8cv-python3-3.8.5/bin:/nix/store/i3mawgdjpy2yy3kjw4d4lbi87b474wd6-python3.8-html2text-2020.1.16/bin'${PATH:+':'}$PATH
+export PYTHONNOUSERSITE='true'
+exec -a "$0" "/nix/store/i3mawgdjpy2yy3kjw4d4lbi87b474wd6-python3.8-html2text-2020.1.16/bin/.html2text-wrapped"  "$@"

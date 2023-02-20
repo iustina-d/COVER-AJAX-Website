@@ -1,0 +1,4 @@
+#! /nix/store/2jysm3dfsgby5sw5jgj43qjrb5v79ms9-bash-4.4-p23/bin/bash -e
+export PATH='/nix/store/z65l1jqvxa58zzwwa3bvglb6asj4y8cv-python3-3.8.5/bin:/nix/store/g4lxza7dzj1nia0dzlc2q0y12wlxgfjf-python3.8-autobahn-20.7.1/bin:/nix/store/cxxxsva9l3ff12s3whczcvz3gxmzzz49-python3.8-Twisted-20.3.0/bin:/nix/store/qhkjyr368wbsw9jacxpxdyaiz1ca4d7c-python3.8-Automat-20.2.0/bin:/nix/store/vliz92p6b5ykk3xqyd8rr6kiv50flfnd-python3.8-setuptools-47.3.1/bin'${PATH:+':'}$PATH
+export PYTHONNOUSERSITE='true'
+exec -a "$0" "/nix/store/g4lxza7dzj1nia0dzlc2q0y12wlxgfjf-python3.8-autobahn-20.7.1/bin/.wamp-wrapped"  "$@"

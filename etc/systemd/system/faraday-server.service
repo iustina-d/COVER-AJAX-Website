@@ -1,0 +1,15 @@
+[Unit]
+Description=Faraday Server
+After=network.target
+
+[Service]
+Type=exec
+UMask=2002
+User=faraday
+Group=faraday
+Environment=FARADAY_HOME=/home/faraday
+ExecStart=/opt/faraday/bin/faraday-server
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

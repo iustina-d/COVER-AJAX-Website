@@ -1,0 +1,10 @@
+prefix=/nix/store/d9di2grdykar2sdmvj2qdv1hs5sjhfn5-libimagequant-2.12.6
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+Name: imagequant
+Description: Small, portable C library for high-quality conversion of RGBA images to 8-bit indexed-color (palette) images.
+URL: https://pngquant.org/lib/
+Version: 2.12.6
+Libs: -L${libdir} -limagequant
+Cflags: -I${includedir}
