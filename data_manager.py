@@ -1,6 +1,6 @@
 from psycopg2._psycopg import cursor
 from psycopg2.extras import RealDictCursor
-import database_common
+import database_common as database_common
 
 @database_common.connection_handler
 def get_all_products(cursor):
