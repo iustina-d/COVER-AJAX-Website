@@ -1,6 +1,8 @@
+import os
 from flask import Flask,render_template
 import os
-import data_manager
+import data_manager as data_manager
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 app.secret_key = "aegsrg-wr+a7 na7"
@@ -8,7 +10,9 @@ app.secret_key = "aegsrg-wr+a7 na7"
 UPLOAD_FOLDER = (
   os.getenv("UPLOAD_FOLDER") if "UPLOAD_FOLDER" in os.environ else "images"
 )
-app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
+# app.config["SQL_DATABSE_URL"] = os.environ.get("DATABASE_URL")
+
+# db = SQLAlchemy(app)
 
 @app.route("/")
 def main():
